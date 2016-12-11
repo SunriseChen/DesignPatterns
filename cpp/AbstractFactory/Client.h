@@ -3,16 +3,14 @@
 #include <memory>
 #include "AbstractFactory.h"
 
-using namespace std;
-
 namespace Sunrise { namespace DesignPatterns { namespace AbstractFactory {
 
 class Client
 {
-    shared_ptr<AbstractFactory> abstractFactory;
+    std::shared_ptr<AbstractFactory> abstractFactory;
 
 public:
-    Client(shared_ptr<AbstractFactory> abstractFactory);
+    Client(std::shared_ptr<AbstractFactory> abstractFactory);
 
     void Run();
 };
