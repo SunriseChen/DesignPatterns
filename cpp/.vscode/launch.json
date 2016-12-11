@@ -5,7 +5,7 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${file}.exe",
+            "program": "${workspaceRoot}/DesignPatterns.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
@@ -27,7 +27,7 @@
             "name": "C++ Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${file}.exe",
+            "program": "${workspaceRoot}/DesignPatterns.exe",
             "processId": "${command.pickProcess}",
             "linux": {
                 "MIMode": "gdb"

@@ -17,7 +17,7 @@ Show::Show()
 
 Show::~Show()
 {
-    cout << "AbstractFactory Finished!" << endl;
+    cout << "AbstractFactory Finished!" << endl << endl;
 }
 
 void Show::Run()
