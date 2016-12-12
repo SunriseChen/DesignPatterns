@@ -10,7 +10,7 @@ class Client
     std::shared_ptr<AbstractFactory> abstractFactory;
 
 public:
-    Client(std::shared_ptr<AbstractFactory> abstractFactory);
+    Client(const std::shared_ptr<AbstractFactory> &abstractFactory);
 
     void Run();
 };

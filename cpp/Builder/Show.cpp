@@ -16,6 +16,7 @@ Show::Show()
 Show::~Show()
 {
     cout << "Builder Finished!" << endl << endl;
+    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run()

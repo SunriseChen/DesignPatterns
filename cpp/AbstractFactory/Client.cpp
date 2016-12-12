@@ -7,7 +7,7 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace AbstractFactory {
 
-Client::Client(shared_ptr<AbstractFactory> abstractFactory)
+Client::Client(const shared_ptr<AbstractFactory> &abstractFactory)
 {
     cout << "Client::Client(" << abstractFactory << ")" << endl;
     this->abstractFactory = abstractFactory;
