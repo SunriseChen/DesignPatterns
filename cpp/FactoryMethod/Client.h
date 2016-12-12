@@ -11,7 +11,7 @@ class Client
 public:
     Client(const std::shared_ptr<Creator> &creator);
 
-    void Run();
+    void Run() const;
 };
 
 } } }

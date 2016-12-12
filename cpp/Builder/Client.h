@@ -7,7 +7,7 @@ class Client
 public:
     Client();
 
-    void Run();
+    void Run() const;
 };
 
 } } }

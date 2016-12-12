@@ -10,14 +10,14 @@ Creator::Creator()
     cout << "Creator::Creator()" << endl;
 }
 
-shared_ptr<Product> Creator::FactoryMethod()
+shared_ptr<Product> Creator::FactoryMethod() const
 {
     cout << "Creator::FactoryMethod()" << endl;
 
     return make_shared<Product>();
 }
 
-void Creator::AnOperation()
+void Creator::AnOperation() const
 {
     cout << "Creator::AnOperation()" << endl;
 

@@ -12,7 +12,7 @@ public:
     ConcreteBuilder();
 
     virtual void BuildPart(const std::string &part);
-    const std::string & GetResult();
+    const std::string & GetResult() const;
 };
 
 } } }

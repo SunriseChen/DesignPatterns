@@ -5,13 +5,13 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Builder {
 
-Director::Director(shared_ptr<Builder> builder)
+Director::Director(const shared_ptr<Builder> &builder)
 {
     cout << "Director::Director(" << builder << ")" << endl;
     this->builder = builder;
 }
 
-void Director::Construct()
+void Director::Construct() const
 {
     cout << "Director::Construct()" << endl;
 

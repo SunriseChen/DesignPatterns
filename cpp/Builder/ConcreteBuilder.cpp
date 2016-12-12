@@ -24,7 +24,7 @@ void ConcreteBuilder::BuildPart(const string &part)
     }
 }
 
-const string & ConcreteBuilder::GetResult()
+const string & ConcreteBuilder::GetResult() const
 {
     cout << "ConcreteBuilder::GetResult()" << endl;
     return result;

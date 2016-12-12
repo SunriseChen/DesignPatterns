@@ -10,8 +10,8 @@ class Creator
 public:
     Creator();
 
-    virtual std::shared_ptr<Product> FactoryMethod();
-    void AnOperation();
+    virtual std::shared_ptr<Product> FactoryMethod() const;
+    void AnOperation() const;
 };
 
 } } }

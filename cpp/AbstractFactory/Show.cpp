@@ -21,7 +21,7 @@ Show::~Show()
     cout << string(68, '=') << endl << endl;
 }
 
-void Show::Run()
+void Show::Run() const
 {
     auto abstractFactory = make_shared<AbstractFactory>();
     auto client = make_shared<Client>(abstractFactory);

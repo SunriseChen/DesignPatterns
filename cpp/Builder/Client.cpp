@@ -13,7 +13,7 @@ Client::Client()
     cout << "Client::Client()" << endl;
 }
 
-void Client::Run()
+void Client::Run() const
 {
     cout << "Client::Run()" << endl;
 

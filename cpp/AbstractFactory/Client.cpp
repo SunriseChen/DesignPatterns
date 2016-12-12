@@ -13,7 +13,7 @@ Client::Client(const shared_ptr<AbstractFactory> &abstractFactory)
     this->abstractFactory = abstractFactory;
 }
 
-void Client::Run()
+void Client::Run() const
 {
     cout << "Client::Run()" << endl;
 

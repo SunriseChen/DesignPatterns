@@ -10,9 +10,9 @@ class Director
     std::shared_ptr<Builder> builder;
 
 public:
-    Director(std::shared_ptr<Builder> builder);
+    Director(const std::shared_ptr<Builder> &builder);
 
-    void Construct();
+    void Construct() const;
 };
 
 } } }

@@ -10,7 +10,7 @@ class ConcreteCreator : public Creator
 public:
     ConcreteCreator();
 
-    virtual std::shared_ptr<Product> FactoryMethod();
+    virtual std::shared_ptr<Product> FactoryMethod() const;
 };
 
 } } }

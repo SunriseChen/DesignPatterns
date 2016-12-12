@@ -8,7 +8,7 @@ public:
     Show();
     virtual ~Show();
 
-    void Run();
+    void Run() const;
 };
 
 } } }

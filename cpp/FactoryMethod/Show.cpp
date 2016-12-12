@@ -20,7 +20,7 @@ Show::~Show()
     cout << string(68, '=') << endl << endl;
 }
 
-void Show::Run()
+void Show::Run() const
 {
     Client client(make_shared<ConcreteCreator>());
     client.Run();

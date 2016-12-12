@@ -12,7 +12,7 @@ Client::Client(const std::shared_ptr<Creator> &creator)
     this->creator = creator;
 }
 
-void Client::Run()
+void Client::Run() const
 {
     cout << "Client::Run()" << endl;
 
