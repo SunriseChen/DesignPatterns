@@ -15,7 +15,6 @@ Show::Show()
     cout << "FactoryMethod Start:" << endl;
 }
 
-
 Show::~Show()
 {
     cout << "FactoryMethod Finished!" << endl << endl;

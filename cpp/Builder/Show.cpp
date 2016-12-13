@@ -12,7 +12,6 @@ Show::Show()
     cout << "Builder Start:" << endl;
 }
 
-
 Show::~Show()
 {
     cout << "Builder Finished!" << endl << endl;

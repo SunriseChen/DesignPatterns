@@ -14,7 +14,6 @@ Show::Show()
     cout << "AbstractFactory Start:" << endl;
 }
 
-
 Show::~Show()
 {
     cout << "AbstractFactory Finished!" << endl << endl;
