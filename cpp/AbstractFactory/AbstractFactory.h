@@ -6,6 +6,7 @@
 
 namespace Sunrise { namespace DesignPatterns { namespace AbstractFactory {
 
+// 声明一个创建抽象产品对象的操作接口。
 class AbstractFactory
 {
 public:

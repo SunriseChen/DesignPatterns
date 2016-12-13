@@ -4,6 +4,7 @@
 
 namespace Sunrise { namespace DesignPatterns { namespace AbstractFactory {
 
+// 实现创建具体产品对象的操作。
 class ConcreteFactory1 : public AbstractFactory
 {
 public:
