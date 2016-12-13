@@ -3,6 +3,8 @@
 #include <iostream>
 #include "Client.h"
 #include "ConcreteCreator.h"
+#include "ConcreteProduct.h"
+#include "StandardCreator.h"
 
 using namespace std;
 
@@ -22,8 +24,14 @@ Show::~Show()
 
 void Show::Run() const
 {
-    Client client(make_shared<ConcreteCreator>());
-    client.Run();
+    shared_ptr<Creator> creator = make_shared<ConcreteCreator>();
+    auto client = make_shared<Client>(creator);
+    client->Run();
+    cout << endl;
+
+    creator = make_shared<StandardCreator<ConcreteProduct>>();
+    client = make_shared<Client>(creator);
+    client->Run();
     cout << endl;
 }
 
