@@ -17,6 +17,8 @@ void Client::Run() const
     cout << "Client::Run()" << endl;
 
     creator->AnOperation();
+    auto product = creator->GetProduct();
+    product = creator->GetProduct();
 }
 
 } } }

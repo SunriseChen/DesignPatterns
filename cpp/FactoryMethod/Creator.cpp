@@ -24,4 +24,16 @@ void Creator::AnOperation() const
     auto product = FactoryMethod();
 }
 
+const shared_ptr<Product> & Creator::GetProduct()
+{
+    cout << "Creator::GetProduct()" << endl;
+
+    if (!product)
+    {
+        product = FactoryMethod();
+    }
+
+    return product;
+}
+
 } } }
