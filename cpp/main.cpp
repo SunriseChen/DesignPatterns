@@ -3,6 +3,7 @@
 #include "AbstractFactory/Show.h"
 #include "Builder/Show.h"
 #include "FactoryMethod/Show.h"
+#include "Prototype/Show.h"
 
 using namespace std;
 
@@ -24,11 +25,18 @@ void FactoryMethod()
     show.Run();
 }
 
+void Prototype()
+{
+    Sunrise::DesignPatterns::Prototype::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     AbstractFactory();
     Builder();
     FactoryMethod();
+    Prototype();
 
     char c;
     cin >> c;
