@@ -4,6 +4,7 @@
 #include "Builder/Show.h"
 #include "FactoryMethod/Show.h"
 #include "Prototype/Show.h"
+#include "Singleton/Show.h"
 
 using namespace std;
 
@@ -31,12 +32,19 @@ void Prototype()
     show.Run();
 }
 
+void Singleton()
+{
+    Sunrise::DesignPatterns::Singleton::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     AbstractFactory();
     Builder();
     FactoryMethod();
     Prototype();
+    Singleton();
 
     char c;
     cin >> c;
