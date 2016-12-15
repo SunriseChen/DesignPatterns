@@ -5,6 +5,7 @@
 #include "FactoryMethod/Show.h"
 #include "Prototype/Show.h"
 #include "Singleton/Show.h"
+#include "Adapter/Show.h"
 
 using namespace std;
 
@@ -38,6 +39,12 @@ void Singleton()
     show.Run();
 }
 
+void Adapter()
+{
+    Sunrise::DesignPatterns::Adapter::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     AbstractFactory();
@@ -45,6 +52,7 @@ int main(int argc, char *args[])
     FactoryMethod();
     Prototype();
     Singleton();
+    Adapter();
 
     char c;
     cin >> c;
