@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Target.h"
 #include <memory>
+#include "Target.h"
 
 namespace Sunrise { namespace DesignPatterns { namespace Adapter {
 
