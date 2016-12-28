@@ -6,7 +6,7 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Adapter {
 
-Client::Client(const std::shared_ptr<Target> &target)
+Client::Client(const shared_ptr<Target> &target)
 {
     cout << "Client::Client(" << target << ")" << endl;
     this->target = target;
