@@ -8,6 +8,7 @@
 #include "Adapter/Show.h"
 #include "Bridge/Show.h"
 #include "Composite/Show.h"
+#include "Decorator/Show.h"
 
 using namespace std;
 
@@ -59,6 +60,12 @@ void Composite()
     show.Run();
 }
 
+void Decorator()
+{
+    Sunrise::DesignPatterns::Decorator::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     AbstractFactory();
@@ -69,6 +76,7 @@ int main(int argc, char *args[])
     Adapter();
     Bridge();
     Composite();
+    Decorator();
 
     char c;
     cin >> c;
