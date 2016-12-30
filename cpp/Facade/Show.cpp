@@ -4,16 +4,16 @@
 
 using namespace std;
 
-namespace Sunrise { namespace DesignPatterns { namespace Decorator {
+namespace Sunrise { namespace DesignPatterns { namespace Facade {
 
 Show::Show()
 {
-    cout << "Decorator Start:" << endl;
+    cout << "Facade Start:" << endl;
 }
 
 Show::~Show()
 {
-    cout << "Decorator Finished!" << endl << endl;
+    cout << "Facade Finished!" << endl << endl;
     cout << string(68, '=') << endl << endl;
 }
 
