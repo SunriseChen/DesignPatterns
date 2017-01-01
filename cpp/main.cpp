@@ -75,6 +75,10 @@ void Facade()
 
 int main(int argc, char *args[])
 {
+    // pass unused warning
+    argc = argc;
+    args = args;
+
     AbstractFactory();
     Builder();
     FactoryMethod();

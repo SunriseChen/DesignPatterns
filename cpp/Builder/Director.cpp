@@ -25,7 +25,7 @@ void Director::Construct() const
     };
 
     auto count = extent<decltype(parts)>::value;
-    for (int i = 0; i < count; ++i)
+    for (unsigned i = 0; i < count; ++i)
     {
         builder->BuildPart(parts[i]);
     }

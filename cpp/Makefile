@@ -10,7 +10,7 @@ SRC_PATH = .
 # 项目使用的库，以空格分隔
 LIBS =
 # 一般的编译选项
-COMPILE_FLAGS = -std=c++11 #-Wall -Wextra
+COMPILE_FLAGS = -std=c++11 -Wall -Wextra
 # 附加的 Release 编译选项
 # https://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc/Optimize-Options.html
 RCOMPILE_FLAGS = -D NDEBUG -O2
