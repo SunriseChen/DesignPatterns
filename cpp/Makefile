@@ -1,3 +1,5 @@
+# 文件参考来自：https://github.com/mbcrawfo/GenericMakefile/blob/master/cpp/Makefile
+
 #### 项目设置开始 ####
 # 要创建的可执行文件的名称
 BIN_NAME := DesignPatterns.exe
@@ -210,7 +212,7 @@ $(BIN_PATH)/$(BIN_NAME): $(OBJECTS)
 	@$(END_TIME)
 
 # Add dependency files, if they exist
-#-include $(DEPS)
+-include $(DEPS)
 
 # Source file rules
 # After the first compilation they will be joined with the rules from the
