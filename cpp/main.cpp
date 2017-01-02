@@ -10,6 +10,7 @@
 #include "Composite/Show.h"
 #include "Decorator/Show.h"
 #include "Facade/Show.h"
+#include "Flyweight/Show.h"
 
 using namespace std;
 
@@ -73,6 +74,12 @@ void Facade()
     show.Run();
 }
 
+void Flyweight()
+{
+    Sunrise::DesignPatterns::Flyweight::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -89,6 +96,7 @@ int main(int argc, char *args[])
     Composite();
     Decorator();
     Facade();
+    Flyweight();
 
     char c;
     cin >> c;
