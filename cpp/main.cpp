@@ -11,6 +11,7 @@
 #include "Decorator/Show.h"
 #include "Facade/Show.h"
 #include "Flyweight/Show.h"
+#include "Proxy/Show.h"
 
 using namespace std;
 
@@ -80,6 +81,12 @@ void Flyweight()
     show.Run();
 }
 
+void Proxy()
+{
+    Sunrise::DesignPatterns::Proxy::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -97,6 +104,7 @@ int main(int argc, char *args[])
     Decorator();
     Facade();
     Flyweight();
+    Proxy();
 
     char c;
     cin >> c;
