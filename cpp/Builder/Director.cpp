@@ -6,9 +6,9 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Builder {
 
 Director::Director(const shared_ptr<Builder> &builder)
+    : builder(builder)
 {
     cout << "Director::Director(" << builder << ")" << endl;
-    this->builder = builder;
 }
 
 void Director::Construct() const

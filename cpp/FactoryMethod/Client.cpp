@@ -6,10 +6,10 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace FactoryMethod {
 
-Client::Client(const std::shared_ptr<Creator> &creator)
+Client::Client(const shared_ptr<Creator> &creator)
+    : creator(creator)
 {
     cout << "Client::Client(" << creator << ")" << endl;
-    this->creator = creator;
 }
 
 void Client::Run() const

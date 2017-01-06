@@ -6,9 +6,9 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Bridge {
 
 Abstraction::Abstraction(const shared_ptr<Implementor> &impl)
+    : impl(impl)
 {
     cout << "Abstraction::Abstraction(" << impl << ")" << endl;
-    this->impl = impl;
 }
 
 void Abstraction::Operation() const

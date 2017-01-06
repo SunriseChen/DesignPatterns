@@ -5,11 +5,11 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Adapter { namespace Object {
 
-Adapter::Adapter(const std::shared_ptr<Adaptee> &adaptee)
-    : Target()
+Adapter::Adapter(const shared_ptr<Adaptee> &adaptee)
+    : Target(), 
+    adaptee(adaptee)
 {
     cout << "Object::Adapter::Adapter(" << adaptee << ")" << endl;
-    this->adaptee = adaptee;
 }
 
 void Adapter::Request() const

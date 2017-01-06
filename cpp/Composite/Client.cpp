@@ -6,9 +6,9 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Composite {
 
 Client::Client(const shared_ptr<Component> &component)
+    : component(component)
 {
     cout << "Client::Client(" << component << ")" << endl;
-    this->component = component;
 }
 
 void Client::Run() const

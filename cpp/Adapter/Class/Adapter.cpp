@@ -6,7 +6,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Adapter { namespace Class {
 
 Adapter::Adapter()
-    : Target(), Adaptee()
+    : Target(), 
+    Adaptee()
 {
     cout << "Class::Adapter::Adapter()" << endl;
 }

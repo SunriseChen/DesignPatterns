@@ -6,10 +6,10 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Decorator {
 
 Decorator::Decorator(const shared_ptr<Component> &component)
-    : Component()
+    : Component(), 
+    component(component)
 {
     cout << "Decorator::Decorator(" << component << ")" << endl;
-    this->component = component;
 }
 
 void Decorator::Operation()

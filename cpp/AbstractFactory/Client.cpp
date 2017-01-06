@@ -8,9 +8,9 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace AbstractFactory {
 
 Client::Client(const shared_ptr<AbstractFactory> &abstractFactory)
+    : abstractFactory(abstractFactory)
 {
     cout << "Client::Client(" << abstractFactory << ")" << endl;
-    this->abstractFactory = abstractFactory;
 }
 
 void Client::Run() const
