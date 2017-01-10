@@ -6,9 +6,10 @@ namespace Sunrise { namespace DesignPatterns { namespace Command {
 class Command
 {
 public:
-    Command();
-
     virtual void Execute() const;
+
+protected:
+    Command();
 };
 
 } } }
