@@ -13,6 +13,7 @@
 #include "Flyweight/Show.h"
 #include "Proxy/Show.h"
 #include "ChainOfResponsibility/Show.h"
+#include "Command/Show.h"
 
 using namespace std;
 
@@ -94,6 +95,12 @@ void ChainOfResponsibility()
     show.Run();
 }
 
+void Command()
+{
+    Sunrise::DesignPatterns::Command::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -113,6 +120,7 @@ int main(int argc, char *args[])
     Flyweight();
     Proxy();
     ChainOfResponsibility();
+    Command();
 
     char c;
     cin >> c;
