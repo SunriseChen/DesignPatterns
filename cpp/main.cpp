@@ -14,6 +14,7 @@
 #include "Proxy/Show.h"
 #include "ChainOfResponsibility/Show.h"
 #include "Command/Show.h"
+#include "Interpreter/Show.h"
 
 using namespace std;
 
@@ -101,6 +102,12 @@ void Command()
     show.Run();
 }
 
+void Interpreter()
+{
+    Sunrise::DesignPatterns::Interpreter::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -121,6 +128,7 @@ int main(int argc, char *args[])
     Proxy();
     ChainOfResponsibility();
     Command();
+    Interpreter();
 
     char c;
     cin >> c;
