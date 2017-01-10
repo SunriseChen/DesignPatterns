@@ -12,6 +12,7 @@
 #include "Facade/Show.h"
 #include "Flyweight/Show.h"
 #include "Proxy/Show.h"
+#include "ChainOfResponsibility/Show.h"
 
 using namespace std;
 
@@ -87,6 +88,12 @@ void Proxy()
     show.Run();
 }
 
+void ChainOfResponsibility()
+{
+    Sunrise::DesignPatterns::ChainOfResponsibility::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -105,6 +112,7 @@ int main(int argc, char *args[])
     Facade();
     Flyweight();
     Proxy();
+    ChainOfResponsibility();
 
     char c;
     cin >> c;
