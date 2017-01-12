@@ -15,6 +15,7 @@
 #include "ChainOfResponsibility/Show.h"
 #include "Command/Show.h"
 #include "Interpreter/Show.h"
+#include "Iterator/Show.h"
 
 using namespace std;
 
@@ -108,6 +109,12 @@ void Interpreter()
     show.Run();
 }
 
+void Iterator()
+{
+    Sunrise::DesignPatterns::Iterator::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -129,6 +136,7 @@ int main(int argc, char *args[])
     ChainOfResponsibility();
     Command();
     Interpreter();
+    Iterator();
 
     char c;
     cin >> c;
