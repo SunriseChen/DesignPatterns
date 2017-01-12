@@ -16,6 +16,7 @@
 #include "Command/Show.h"
 #include "Interpreter/Show.h"
 #include "Iterator/Show.h"
+#include "Mediator/Show.h"
 
 using namespace std;
 
@@ -115,6 +116,12 @@ void Iterator()
     show.Run();
 }
 
+void Mediator()
+{
+    Sunrise::DesignPatterns::Mediator::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -137,6 +144,7 @@ int main(int argc, char *args[])
     Command();
     Interpreter();
     Iterator();
+    Mediator();
 
     char c;
     cin >> c;
