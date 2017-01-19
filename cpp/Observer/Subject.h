@@ -11,9 +11,10 @@ class Subject
 {
     std::list<Observer *> observers;
 
-public:
+protected:
     Subject();
 
+public:
     virtual void Attach(Observer *observer);
     virtual void Detach(Observer *observer);
     virtual void Notify();

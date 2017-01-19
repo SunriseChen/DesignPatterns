@@ -10,9 +10,4 @@ Observer::Observer()
     cout << "Observer::Observer()" << endl;
 }
 
-void Observer::Update()
-{
-    cout << "Observer::Update()" << endl;
-}
-
 } } }
