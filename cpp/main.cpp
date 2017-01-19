@@ -19,6 +19,7 @@
 #include "Mediator/Show.h"
 #include "Memento/Show.h"
 #include "Observer/Show.h"
+#include "State/Show.h"
 
 using namespace std;
 
@@ -136,6 +137,12 @@ void Observer()
     show.Run();
 }
 
+void State()
+{
+    Sunrise::DesignPatterns::State::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -161,6 +168,7 @@ int main(int argc, char *args[])
     Mediator();
     Memento();
     Observer();
+    State();
 
     char c;
     cin >> c;
