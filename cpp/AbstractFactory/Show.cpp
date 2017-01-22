@@ -11,12 +11,12 @@ namespace Sunrise { namespace DesignPatterns { namespace AbstractFactory {
 
 Show::Show()
 {
-    cout << "AbstractFactory Start:" << endl;
+    cout << "Abstract Factory Start:" << endl;
 }
 
 Show::~Show()
 {
-    cout << "AbstractFactory Finished!" << endl << endl;
+    cout << "Abstract Factory Finished!" << endl << endl;
     cout << string(68, '=') << endl << endl;
 }
 

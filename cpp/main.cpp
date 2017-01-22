@@ -21,6 +21,7 @@
 #include "Observer/Show.h"
 #include "State/Show.h"
 #include "Strategy/Show.h"
+#include "TemplateMethod/Show.h"
 
 using namespace std;
 
@@ -150,6 +151,13 @@ void Strategy()
     show.Run();
 }
 
+
+void TemplateMethod()
+{
+    Sunrise::DesignPatterns::TemplateMethod::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -177,6 +185,7 @@ int main(int argc, char *args[])
     Observer();
     State();
     Strategy();
+    TemplateMethod();
 
     char c;
     cin >> c;

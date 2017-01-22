@@ -12,12 +12,12 @@ namespace Sunrise { namespace DesignPatterns { namespace FactoryMethod {
 
 Show::Show()
 {
-    cout << "FactoryMethod Start:" << endl;
+    cout << "Factory Method Start:" << endl;
 }
 
 Show::~Show()
 {
-    cout << "FactoryMethod Finished!" << endl << endl;
+    cout << "Factory Method Finished!" << endl << endl;
     cout << string(68, '=') << endl << endl;
 }
 

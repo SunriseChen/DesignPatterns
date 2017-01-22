@@ -11,12 +11,12 @@ namespace Sunrise { namespace DesignPatterns { namespace ChainOfResponsibility {
 
 Show::Show()
 {
-    cout << "ChainOfResponsibility Start:" << endl;
+    cout << "Chain Of Responsibility Start:" << endl;
 }
 
 Show::~Show()
 {
-    cout << "ChainOfResponsibility Finished!" << endl << endl;
+    cout << "Chain Of Responsibility Finished!" << endl << endl;
     cout << string(68, '=') << endl << endl;
 }
 
