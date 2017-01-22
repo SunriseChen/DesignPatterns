@@ -22,6 +22,7 @@
 #include "State/Show.h"
 #include "Strategy/Show.h"
 #include "TemplateMethod/Show.h"
+#include "Visitor/Show.h"
 
 using namespace std;
 
@@ -151,10 +152,15 @@ void Strategy()
     show.Run();
 }
 
-
 void TemplateMethod()
 {
     Sunrise::DesignPatterns::TemplateMethod::Show show;
+    show.Run();
+}
+
+void Visitor()
+{
+    Sunrise::DesignPatterns::Visitor::Show show;
     show.Run();
 }
 
@@ -186,6 +192,7 @@ int main(int argc, char *args[])
     State();
     Strategy();
     TemplateMethod();
+    Visitor();
 
     char c;
     cin >> c;
