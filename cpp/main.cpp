@@ -20,6 +20,7 @@
 #include "Memento/Show.h"
 #include "Observer/Show.h"
 #include "State/Show.h"
+#include "Strategy/Show.h"
 
 using namespace std;
 
@@ -143,6 +144,12 @@ void State()
     show.Run();
 }
 
+void Strategy()
+{
+    Sunrise::DesignPatterns::Strategy::Show show;
+    show.Run();
+}
+
 int main(int argc, char *args[])
 {
     // pass unused warning
@@ -169,6 +176,7 @@ int main(int argc, char *args[])
     Memento();
     Observer();
     State();
+    Strategy();
 
     char c;
     cin >> c;
