@@ -10,14 +10,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Composite {
 
 Show::Show()
+    : ShowBase("Composite")
 {
-    cout << "Composite Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Composite Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

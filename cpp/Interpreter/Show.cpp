@@ -10,14 +10,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Interpreter {
 
 Show::Show()
+    : ShowBase("Interpreter")
 {
-    cout << "Interpreter Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Interpreter Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

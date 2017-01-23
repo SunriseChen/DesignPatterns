@@ -10,14 +10,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Proxy {
 
 Show::Show()
+    : ShowBase("Proxy")
 {
-    cout << "Proxy Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Proxy Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

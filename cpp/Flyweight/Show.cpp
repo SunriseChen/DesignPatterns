@@ -7,14 +7,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Flyweight {
 
 Show::Show()
+    : ShowBase("Flyweight")
 {
-    cout << "Flyweight Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Flyweight Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

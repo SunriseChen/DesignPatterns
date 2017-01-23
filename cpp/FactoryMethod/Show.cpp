@@ -11,14 +11,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace FactoryMethod {
 
 Show::Show()
+    : ShowBase("Factory Method")
 {
-    cout << "Factory Method Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Factory Method Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

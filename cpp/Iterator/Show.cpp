@@ -9,14 +9,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 
 Show::Show()
+    : ShowBase("Iterator")
 {
-    cout << "Iterator Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Iterator Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

@@ -10,14 +10,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace ChainOfResponsibility {
 
 Show::Show()
+    : ShowBase("Chain Of Responsibility")
 {
-    cout << "Chain Of Responsibility Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Chain Of Responsibility Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

@@ -7,14 +7,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Decorator {
 
 Show::Show()
+    : ShowBase("Decorator")
 {
-    cout << "Decorator Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Decorator Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

@@ -12,14 +12,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Visitor {
 
 Show::Show()
+    : ShowBase("Visitor")
 {
-    cout << "Visitor Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Visitor Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

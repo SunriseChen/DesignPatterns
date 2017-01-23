@@ -7,14 +7,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace State {
 
 Show::Show()
+    : ShowBase("State")
 {
-    cout << "State Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "State Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const

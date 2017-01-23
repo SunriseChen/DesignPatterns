@@ -7,14 +7,8 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Observer {
 
 Show::Show()
+    : ShowBase("Observer")
 {
-    cout << "Observer Start:" << endl;
-}
-
-Show::~Show()
-{
-    cout << "Observer Finished!" << endl << endl;
-    cout << string(68, '=') << endl << endl;
 }
 
 void Show::Run() const
