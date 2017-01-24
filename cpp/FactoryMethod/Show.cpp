@@ -15,7 +15,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     shared_ptr<Creator> creator = make_shared<ConcreteCreator>();
     auto client = make_shared<Client>(creator);

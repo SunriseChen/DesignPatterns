@@ -14,7 +14,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     auto realSubject = make_shared<RealSubject>();
     auto proxy = make_shared<Proxy>(realSubject);

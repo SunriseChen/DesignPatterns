@@ -11,7 +11,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     Client client;
     client.Run();

@@ -16,7 +16,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     shared_ptr<Target> target = make_shared<Class::Adapter>();
     auto client = make_shared<Client>(target);

@@ -14,7 +14,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     auto abstractFactory = make_shared<AbstractFactory>();
     auto client = make_shared<Client>(abstractFactory);

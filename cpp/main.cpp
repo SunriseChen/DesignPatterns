@@ -1,5 +1,8 @@
-#include <memory>
 #include <iostream>
+#include <unordered_set>
+#include <string>
+
+#include "Utilities.h"
 #include "AbstractFactory/Show.h"
 #include "Builder/Show.h"
 #include "FactoryMethod/Show.h"
@@ -25,177 +28,82 @@
 #include "Visitor/Show.h"
 
 using namespace std;
+using namespace Sunrise::DesignPatterns;
 
-void AbstractFactory()
+void ShowHelp(const string &program)
 {
-    Sunrise::DesignPatterns::AbstractFactory::Show show;
-    show.Run();
+    cout << "Using:" << endl;
+    cout << program << " { All | Design Pattern Name | AbstractFactory | Adapter | ... }" << endl;
 }
 
-void Builder()
+typedef unordered_set<string> ShowName;
+
+template<class TShow>
+void Run(const ShowName &names)
 {
-    Sunrise::DesignPatterns::Builder::Show show;
-    show.Run();
+    TShow show;
+    string name(show.Name());
+    if (names.find("all") != names.end() || 
+        names.find(to_lower(remove_space(name))) != names.end())
+    {
+        show.Run();
+    }
 }
 
-void FactoryMethod()
+void PressAnyKey()
 {
-    Sunrise::DesignPatterns::FactoryMethod::Show show;
-    show.Run();
-}
-
-void Prototype()
-{
-    Sunrise::DesignPatterns::Prototype::Show show;
-    show.Run();
-}
-
-void Singleton()
-{
-    Sunrise::DesignPatterns::Singleton::Show show;
-    show.Run();
-}
-
-void Adapter()
-{
-    Sunrise::DesignPatterns::Adapter::Show show;
-    show.Run();
-}
-
-void Bridge()
-{
-    Sunrise::DesignPatterns::Bridge::Show show;
-    show.Run();
-}
-
-void Composite()
-{
-    Sunrise::DesignPatterns::Composite::Show show;
-    show.Run();
-}
-
-void Decorator()
-{
-    Sunrise::DesignPatterns::Decorator::Show show;
-    show.Run();
-}
-
-void Facade()
-{
-    Sunrise::DesignPatterns::Facade::Show show;
-    show.Run();
-}
-
-void Flyweight()
-{
-    Sunrise::DesignPatterns::Flyweight::Show show;
-    show.Run();
-}
-
-void Proxy()
-{
-    Sunrise::DesignPatterns::Proxy::Show show;
-    show.Run();
-}
-
-void ChainOfResponsibility()
-{
-    Sunrise::DesignPatterns::ChainOfResponsibility::Show show;
-    show.Run();
-}
-
-void Command()
-{
-    Sunrise::DesignPatterns::Command::Show show;
-    show.Run();
-}
-
-void Interpreter()
-{
-    Sunrise::DesignPatterns::Interpreter::Show show;
-    show.Run();
-}
-
-void Iterator()
-{
-    Sunrise::DesignPatterns::Iterator::Show show;
-    show.Run();
-}
-
-void Mediator()
-{
-    Sunrise::DesignPatterns::Mediator::Show show;
-    show.Run();
-}
-
-void Memento()
-{
-    Sunrise::DesignPatterns::Memento::Show show;
-    show.Run();
-}
-
-void Observer()
-{
-    Sunrise::DesignPatterns::Observer::Show show;
-    show.Run();
-}
-
-void State()
-{
-    Sunrise::DesignPatterns::State::Show show;
-    show.Run();
-}
-
-void Strategy()
-{
-    Sunrise::DesignPatterns::Strategy::Show show;
-    show.Run();
-}
-
-void TemplateMethod()
-{
-    Sunrise::DesignPatterns::TemplateMethod::Show show;
-    show.Run();
-}
-
-void Visitor()
-{
-    Sunrise::DesignPatterns::Visitor::Show show;
-    show.Run();
+    char c;
+    cin >> c;
 }
 
 int main(int argc, char *args[])
 {
-    // pass unused warning
-    argc = argc;
-    args = args;
+    if (argc > 1)
+    {
+        ShowName names;
+        for (int i = 0; i < argc - 1; ++i)
+        {
+            string name(args[i + 1]);
+            to_lower(trim(name));
+            names.insert(name);
+        }
 
-    AbstractFactory();
-    Builder();
-    FactoryMethod();
-    Prototype();
-    Singleton();
-    Adapter();
-    Bridge();
-    Composite();
-    Decorator();
-    Facade();
-    Flyweight();
-    Proxy();
-    ChainOfResponsibility();
-    Command();
-    Interpreter();
-    Iterator();
-    Mediator();
-    Memento();
-    Observer();
-    State();
-    Strategy();
-    TemplateMethod();
-    Visitor();
+        Run<AbstractFactory::Show>(names);
+        Run<Builder::Show>(names);
+        Run<FactoryMethod::Show>(names);
+        Run<Prototype::Show>(names);
+        Run<Singleton::Show>(names);
+        Run<Adapter::Show>(names);
+        Run<Bridge::Show>(names);
+        Run<Composite::Show>(names);
+        Run<Decorator::Show>(names);
+        Run<Facade::Show>(names);
+        Run<Flyweight::Show>(names);
+        Run<Proxy::Show>(names);
+        Run<ChainOfResponsibility::Show>(names);
+        Run<Command::Show>(names);
+        Run<Interpreter::Show>(names);
+        Run<Iterator::Show>(names);
+        Run<Mediator::Show>(names);
+        Run<Memento::Show>(names);
+        Run<Observer::Show>(names);
+        Run<State::Show>(names);
+        Run<Strategy::Show>(names);
+        Run<TemplateMethod::Show>(names);
+        Run<Visitor::Show>(names);
+    }
+    else
+    {
+        string program(args[0]);
+        auto pos = program.find_last_of("/\\");
+        if (pos != string::npos)
+        {
+            program.erase(0, ++pos);
+        }
+        ShowHelp(program);
+    }
 
-    char c;
-    cin >> c;
+    PressAnyKey();
 
     return 0;
 }

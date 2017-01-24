@@ -6,15 +6,15 @@ namespace Sunrise { namespace DesignPatterns {
 
 class ShowBase
 {
-    std::string name;
+    const std::string name;
 
 public:
-    virtual ~ShowBase();
-
-    virtual void Run() const = 0;
+    const std::string & Name() const;
+    void Run() const;
 
 protected:
     ShowBase(std::string &&name);
+    virtual void DoRun() const = 0;
 };
 
 } }

@@ -14,7 +14,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     auto component = make_shared<Component>();
     cout << endl;

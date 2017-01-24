@@ -14,7 +14,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     auto left = make_shared<TerminalExpression>();
     auto right = make_shared<TerminalExpression>();

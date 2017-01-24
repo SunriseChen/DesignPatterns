@@ -13,7 +13,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     Client client;
     ConcreteAggregate<int> aggregate(vector<int> { 3, 6, 9 });

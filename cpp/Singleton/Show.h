@@ -9,7 +9,8 @@ class Show : public ShowBase
 public:
     Show();
 
-    virtual void Run() const;
+protected:
+    virtual void DoRun() const;
 };
 
 } } }

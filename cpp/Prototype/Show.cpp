@@ -13,7 +13,7 @@ Show::Show()
 {
 }
 
-void Show::Run() const
+void Show::DoRun() const
 {
     shared_ptr<Prototype> prototype = make_shared<ConcretePrototype1>();
     auto client = make_shared<Client>(prototype);
