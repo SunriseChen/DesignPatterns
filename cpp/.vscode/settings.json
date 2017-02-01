@@ -1,6 +1,14 @@
 {
     "files.associations": {
         "*h*h*h*h*halgorithm": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "string": "cpp",
+        "*h*h*h*h*hinitializer_list": "cpp",
+        "initializer_list": "cpp",
+        "*harray": "cpp",
+        "array": "cpp",
+        "unordered_map": "cpp",
+        "*h*h*h*h*h*h*h*h*h*h*h*h*h*h*h*hunordered_set": "cpp",
+        "unordered_set": "cpp"
     }
 }

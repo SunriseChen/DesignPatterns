@@ -9,16 +9,16 @@ namespace Sunrise { namespace DesignPatterns { namespace Composite {
 // 在 Component 接口中实现与子部件有关的操作。
 class Composite : public Component
 {
-    std::list<std::shared_ptr<Component>> children;
+    ComponentList children;
 
 public:
     Composite();
 
     virtual void Operation() const;
-    virtual void Add(std::shared_ptr<Component> component);
-    virtual void Remove(std::shared_ptr<Component> component);
-    virtual std::list<std::shared_ptr<Component>>::iterator GetChildren();
-    virtual std::shared_ptr<Component> GetChild(int index) const;
+    virtual void Add(const ComponentPtr &component);
+    virtual void Remove(const ComponentPtr &component);
+    virtual const ComponentList & GetChildren() const;
+    virtual const ComponentPtr & GetChild(int index) const;
 };
 
 } } }

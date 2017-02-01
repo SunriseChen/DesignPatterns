@@ -10,34 +10,30 @@ Component::Component()
     cout << "Component::Component()" << endl;
 }
 
-void Component::Operation() const
+void Component::Add(const ComponentPtr &component)
 {
-    cout << "Component::Operation()" << endl;
+    cout << "Component::Add(component = " << component << ")" << endl;
 }
 
-void Component::Add(shared_ptr<Component> component)
+void Component::Remove(const ComponentPtr &component)
 {
-    cout << "Component::Add(" << component << ")" << endl;
+    cout << "Component::Remove(component = " << component << ")" << endl;
 }
 
-void Component::Remove(shared_ptr<Component> component)
-{
-    cout << "Component::Remove(" << component << ")" << endl;
-}
-
-list<shared_ptr<Component>>::iterator Component::GetChildren()
+const ComponentList & Component::GetChildren() const
 {
     cout << "Component::GetChildren()" << endl;
 
-    static list<shared_ptr<Component>> empty;
-    return empty.begin();
+    static ComponentList empty;
+    return empty;
 }
 
-shared_ptr<Component> Component::GetChild(int index) const
+const ComponentPtr & Component::GetChild(int index) const
 {
-    cout << "Component::GetChild(" << index << ")" << endl;
+    cout << "Component::GetChild(index = " << index << ")" << endl;
 
-    return nullptr;
+    static ComponentPtr empty;
+    return empty;
 }
 
 } } }

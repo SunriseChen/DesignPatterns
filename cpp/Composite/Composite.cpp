@@ -20,30 +20,30 @@ void Composite::Operation() const
         [](const shared_ptr<Component> &component){ component->Operation(); });
 }
 
-void Composite::Add(shared_ptr<Component> component)
+void Composite::Add(const ComponentPtr &component)
 {
-    cout << "Composite::Add(" << component << ")" << endl;
+    cout << "Composite::Add(component = " << component << ")" << endl;
 
     children.push_back(component);
 }
 
-void Composite::Remove(shared_ptr<Component> component)
+void Composite::Remove(const ComponentPtr &component)
 {
-    cout << "Composite::Remove(" << component << ")" << endl;
+    cout << "Composite::Remove(component = " << component << ")" << endl;
 
     children.remove(component);
 }
 
-list<shared_ptr<Component>>::iterator Composite::GetChildren()
+const ComponentList & Composite::GetChildren() const
 {
     cout << "Composite::GetChildren()" << endl;
 
-    return children.begin();
+    return children;
 }
 
-shared_ptr<Component> Composite::GetChild(int index) const
+const ComponentPtr & Composite::GetChild(int index) const
 {
-    cout << "Composite::GetChild(" << index << ")" << endl;
+    cout << "Composite::GetChild(index = " << index << ")" << endl;
 
     return *next(children.begin(), index);
 }

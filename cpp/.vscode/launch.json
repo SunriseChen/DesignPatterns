@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/DesignPatterns.exe",
-            "args": [ "Command" ],
+            "args": [ "Composite" ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
