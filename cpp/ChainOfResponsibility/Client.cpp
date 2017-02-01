@@ -1,6 +1,6 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
+#include "Handler.h"
 
 using namespace std;
 
@@ -11,11 +11,12 @@ Client::Client()
     cout << "Client::Client()" << endl;
 }
 
-void Client::Run(const shared_ptr<Handler> &handler) const
+void Client::Run(const Handler *handler) const
 {
     cout << "Client::Run(handler = " << handler << ")" << endl;
 
     handler->HandleRequest();
+    cout << endl;
 }
 
 } } }

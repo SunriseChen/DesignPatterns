@@ -1,5 +1,4 @@
 #include "Show.h"
-#include <memory>
 #include <iostream>
 #include "Client.h"
 #include "ConcreteHandler1.h"
@@ -16,10 +15,12 @@ Show::Show()
 
 void Show::DoRun() const
 {
-    auto handler1 = make_shared<ConcreteHandler1>(nullptr);
-    auto handler2 = make_shared<ConcreteHandler2>(handler1);
+    ConcreteHandler1 handler1;
+    ConcreteHandler2 handler2(&handler1);
+    cout << endl;
+
     Client client;
-    client.Run(handler2);
+    client.Run(&handler2);
 }
 
 } } }

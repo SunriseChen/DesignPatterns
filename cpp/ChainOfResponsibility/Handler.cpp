@@ -5,7 +5,7 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace ChainOfResponsibility {
 
-Handler::Handler(const shared_ptr<Handler> &successor)
+Handler::Handler(const Handler *successor)
     : successor(successor)
 {
     cout << "Handler::Handler(successor = " << successor << ")" << endl;

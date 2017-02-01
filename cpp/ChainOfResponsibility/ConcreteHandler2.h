@@ -10,7 +10,7 @@ namespace Sunrise { namespace DesignPatterns { namespace ChainOfResponsibility {
 class ConcreteHandler2 : public Handler
 {
 public:
-    ConcreteHandler2(const std::shared_ptr<Handler> &successor);
+    ConcreteHandler2(const Handler *successor = nullptr);
 
     virtual void HandleRequest() const;
 };
