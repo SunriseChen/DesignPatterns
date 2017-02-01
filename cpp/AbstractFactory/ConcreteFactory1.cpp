@@ -1,7 +1,7 @@
 #include "ConcreteFactory1.h"
+#include <iostream>
 #include "ProductA1.h"
 #include "ProductB1.h"
-#include <iostream>
 
 using namespace std;
 

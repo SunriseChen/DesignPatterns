@@ -1,5 +1,4 @@
 #include "Show.h"
-#include <memory>
 #include <iostream>
 #include "Client.h"
 #include "ConcreteFactory1.h"
@@ -16,19 +15,15 @@ Show::Show()
 
 void Show::DoRun() const
 {
-    auto abstractFactory = make_shared<AbstractFactory>();
-    auto client = make_shared<Client>(abstractFactory);
-    client->Run();
+    Client client;
     cout << endl;
 
-    abstractFactory = make_shared<ConcreteFactory1>();
-    client = make_shared<Client>(abstractFactory);
-    client->Run();
+    ConcreteFactory1 concreteFactory1;
+    client.Run(concreteFactory1);
     cout << endl;
 
-    abstractFactory = make_shared<ConcreteFactory2>();
-    client = make_shared<Client>(abstractFactory);
-    client->Run();
+    ConcreteFactory2 concreteFactory2;
+    client.Run(concreteFactory2);
     cout << endl;
 }
 

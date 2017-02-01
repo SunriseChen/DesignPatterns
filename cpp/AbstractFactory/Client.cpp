@@ -1,24 +1,23 @@
 #include "Client.h"
+#include <iostream>
 #include "AbstractProductA.h"
 #include "AbstractProductB.h"
-#include <iostream>
 
 using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace AbstractFactory {
 
-Client::Client(const shared_ptr<AbstractFactory> &abstractFactory)
-    : abstractFactory(abstractFactory)
+Client::Client()
 {
-    cout << "Client::Client(" << abstractFactory << ")" << endl;
+    cout << "Client::Client()" << endl;
 }
 
-void Client::Run() const
+void Client::Run(const AbstractFactory &abstractFactory) const
 {
-    cout << "Client::Run()" << endl;
+    cout << "Client::Run(" << &abstractFactory << ")" << endl;
 
-    auto productA = abstractFactory->CreateProductA();
-    auto productB = abstractFactory->CreateProductB();
+    auto productA = abstractFactory.CreateProductA();
+    auto productB = abstractFactory.CreateProductB();
 }
 
 } } }
