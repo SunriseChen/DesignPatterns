@@ -1,5 +1,6 @@
 #include "Invoker.h"
 #include <iostream>
+#include "Command.h"
 
 using namespace std;
 
@@ -10,7 +11,7 @@ Invoker::Invoker()
     cout << "Invoker::Invoker()" << endl;
 }
 
-void Invoker::StoreCommand(const shared_ptr<Command> &command)
+void Invoker::StoreCommand(const Command *command)
 {
     cout << "Invoker::StoreCommand(command = " << command << ")" << endl;
 

@@ -1,9 +1,8 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
+#include "Invoker.h"
 #include "Receiver.h"
 #include "ConcreteCommand.h"
-#include "Invoker.h"
 
 using namespace std;
 
@@ -18,11 +17,14 @@ void Client::Run() const
 {
     cout << "Client::Run()" << endl;
 
-    auto receiver = make_shared<Receiver>();
-    auto command = make_shared<ConcreteCommand>(receiver);
+    Receiver receiver;
+    ConcreteCommand command(receiver);
     Invoker invoker;
-    invoker.StoreCommand(command);
+    invoker.StoreCommand(&command);
+    cout << endl;
+
     invoker.Run();
+    cout << endl;
 }
 
 } } }
