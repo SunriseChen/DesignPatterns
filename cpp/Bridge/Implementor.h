@@ -6,10 +6,11 @@ namespace Sunrise { namespace DesignPatterns { namespace Bridge {
 // 一般来讲，Implementor 接口仅提供基本操作，而 Abstraction 则定义了基于这些基本操作的较高层次的操作。
 class Implementor
 {
-public:
+protected:
     Implementor();
 
-    virtual void OperationImpl() const;
+public:
+    virtual void OperationImpl() const = 0;
 };
 
 } } }

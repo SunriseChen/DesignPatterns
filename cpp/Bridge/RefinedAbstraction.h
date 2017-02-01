@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Abstraction.h"
-#include <memory>
 
 namespace Sunrise { namespace DesignPatterns { namespace Bridge {
 
@@ -9,7 +8,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Bridge {
 class RefinedAbstraction : public Abstraction
 {
 public:
-    RefinedAbstraction(const std::shared_ptr<Implementor> &impl);
+    RefinedAbstraction(const Implementor &impl);
 
     virtual void Operation2() const;
 };

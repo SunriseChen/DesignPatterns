@@ -10,9 +10,4 @@ Implementor::Implementor()
     cout << "Implementor::Implementor()" << endl;
 }
 
-void Implementor::OperationImpl() const
-{
-    cout << "Implementor::OperationImpl()" << endl;
-}
-
 } } }

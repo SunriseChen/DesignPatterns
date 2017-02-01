@@ -1,21 +1,22 @@
 #include "Abstraction.h"
 #include <iostream>
+#include "Implementor.h"
 
 using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Bridge {
 
-Abstraction::Abstraction(const shared_ptr<Implementor> &impl)
+Abstraction::Abstraction(const Implementor &impl)
     : impl(impl)
 {
-    cout << "Abstraction::Abstraction(" << impl << ")" << endl;
+    cout << "Abstraction::Abstraction(impl = " << &impl << ")" << endl;
 }
 
 void Abstraction::Operation() const
 {
     cout << "Abstraction::Operation()" << endl;
 
-    impl->OperationImpl();
+    impl.OperationImpl();
 }
 
 } } }

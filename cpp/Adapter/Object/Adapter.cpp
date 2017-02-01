@@ -10,7 +10,7 @@ Adapter::Adapter(const Adaptee &adaptee)
     : Target(), 
     adaptee(adaptee)
 {
-    cout << "Object::Adapter::Adapter(" << &adaptee << ")" << endl;
+    cout << "Object::Adapter::Adapter(adaptee = " << &adaptee << ")" << endl;
 }
 
 void Adapter::Request() const

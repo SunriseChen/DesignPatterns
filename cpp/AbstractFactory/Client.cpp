@@ -15,7 +15,7 @@ Client::Client()
 
 void Client::Run(const AbstractFactory &abstractFactory) const
 {
-    cout << "Client::Run(" << &abstractFactory << ")" << endl;
+    cout << "Client::Run(abstractFactory = " << &abstractFactory << ")" << endl;
 
     auto productA = abstractFactory.CreateProductA();
     auto productB = abstractFactory.CreateProductB();

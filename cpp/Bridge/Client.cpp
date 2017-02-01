@@ -1,9 +1,7 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
+#include "Abstraction.h"
 #include "RefinedAbstraction.h"
-#include "ConcreteImplementorA.h"
-#include "ConcreteImplementorB.h"
 
 using namespace std;
 
@@ -14,19 +12,18 @@ Client::Client()
     cout << "Client::Client()" << endl;
 }
 
-void Client::Run() const
+void Client::Run(const Abstraction &abstraction, const RefinedAbstraction &refinedAbstraction) const
 {
-    cout << "Client::Run()" << endl;
+    cout << "Client::Run(abstraction = " << &abstraction << 
+        ", refinedAbstraction = " << &refinedAbstraction << ")" << endl;
 
-    shared_ptr<Implementor> impl = make_shared<ConcreteImplementorA>();
-    auto abstraction = make_shared<Abstraction>(impl);
-    abstraction->Operation();
+    abstraction.Operation();
     cout << endl;
 
-    impl = make_shared<ConcreteImplementorB>();
-    auto refinedAbstraction = make_shared<RefinedAbstraction>(impl);
-    refinedAbstraction->Operation();
-    refinedAbstraction->Operation2();
+    refinedAbstraction.Operation();
+    cout << endl;
+
+    refinedAbstraction.Operation2();
     cout << endl;
 }
 

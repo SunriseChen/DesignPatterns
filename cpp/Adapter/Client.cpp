@@ -13,7 +13,7 @@ Client::Client()
 
 void Client::Run(const Target &target) const
 {
-    cout << "Client::Run(" << &target << ")" << endl;
+    cout << "Client::Run(target = " << &target << ")" << endl;
 
     target.Request();
 }

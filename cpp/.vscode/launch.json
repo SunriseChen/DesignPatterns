@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/DesignPatterns.exe",
-            "args": [ "Adapter" ],
+            "args": [ "Bridge" ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
