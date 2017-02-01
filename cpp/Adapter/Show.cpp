@@ -1,8 +1,6 @@
 #include "Show.h"
-#include <memory>
 #include <iostream>
 #include "Client.h"
-#include "Target.h"
 #include "Adaptee.h"
 #include "Class/Adapter.h"
 #include "Object/Adapter.h"
@@ -18,15 +16,16 @@ Show::Show()
 
 void Show::DoRun() const
 {
-    shared_ptr<Target> target = make_shared<Class::Adapter>();
-    auto client = make_shared<Client>(target);
-    client->Run();
+    Client client;
     cout << endl;
 
-    auto adaptee = make_shared<Adaptee>();
-    target = make_shared<Object::Adapter>(adaptee);
-    client = make_shared<Client>(target);
-    client->Run();
+    Class::Adapter classAdapter;
+    client.Run(classAdapter);
+    cout << endl;
+
+    Adaptee adaptee;
+    Object::Adapter objectAdapter(adaptee);
+    client.Run(objectAdapter);
     cout << endl;
 }
 

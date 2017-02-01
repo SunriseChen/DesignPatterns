@@ -1,21 +1,21 @@
 #include "Client.h"
 #include <iostream>
+#include "Target.h"
 
 using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Adapter {
 
-Client::Client(const shared_ptr<Target> &target)
-    : target(target)
+Client::Client()
 {
-    cout << "Client::Client(" << target << ")" << endl;
+    cout << "Client::Client()" << endl;
 }
 
-void Client::Run() const
+void Client::Run(const Target &target) const
 {
-    cout << "Client::Run()" << endl;
+    cout << "Client::Run(" << &target << ")" << endl;
 
-    target->Request();
+    target.Request();
 }
 
 } } }

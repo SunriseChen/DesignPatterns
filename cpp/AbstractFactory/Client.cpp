@@ -1,5 +1,6 @@
 #include "Client.h"
 #include <iostream>
+#include "AbstractFactory.h"
 #include "AbstractProductA.h"
 #include "AbstractProductB.h"
 
