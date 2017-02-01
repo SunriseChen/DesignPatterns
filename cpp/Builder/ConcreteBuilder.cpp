@@ -13,7 +13,8 @@ ConcreteBuilder::ConcreteBuilder()
 
 void ConcreteBuilder::BuildPart(const string &part)
 {
-    cout << "ConcreteBuilder::BuildPart(\"" << part << "\")" << endl;
+    cout << "ConcreteBuilder::BuildPart(part = \"" << part << "\")" << endl;
+
     if (result.empty())
     {
         result = part;
@@ -27,6 +28,7 @@ void ConcreteBuilder::BuildPart(const string &part)
 const string & ConcreteBuilder::GetResult() const
 {
     cout << "ConcreteBuilder::GetResult()" << endl;
+
     return result;
 }
 

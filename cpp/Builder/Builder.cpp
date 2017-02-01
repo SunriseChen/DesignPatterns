@@ -10,9 +10,4 @@ Builder::Builder()
     cout << "Builder::Builder()" << endl;
 }
 
-void Builder::BuildPart(const string &part)
-{
-    cout << "Builder::BuildPart(""" << part << """)" << endl;
-}
-
 } } }

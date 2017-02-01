@@ -1,19 +1,21 @@
 #pragma once
 
-#include <memory>
-#include "Builder.h"
+#include <vector>
+#include <string>
 
 namespace Sunrise { namespace DesignPatterns { namespace Builder {
+
+class Builder;
 
 // 构造一个使用 Builder 接口的对象。
 class Director
 {
-    std::shared_ptr<Builder> builder;
+    Builder &builder;
 
 public:
-    Director(const std::shared_ptr<Builder> &builder);
+    Director(Builder &builder);
 
-    void Construct() const;
+    void Construct(const std::vector<std::string> &parts) const;
 };
 
 } } }

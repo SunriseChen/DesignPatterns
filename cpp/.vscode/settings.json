@@ -1,3 +1,6 @@
 {
-    "files.associations": {}
+    "files.associations": {
+        "*h*h*h*h*halgorithm": "cpp",
+        "type_traits": "cpp"
+    }
 }
