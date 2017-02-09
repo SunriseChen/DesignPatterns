@@ -5,17 +5,18 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Decorator {
 
-ConcreteDecoratorA::ConcreteDecoratorA(const shared_ptr<Component> &component)
+ConcreteDecoratorA::ConcreteDecoratorA(Component &component)
     : Decorator(component), 
     addedState(0)
 {
-    cout << "ConcreteDecoratorA::ConcreteDecoratorA(" << component << ")" << endl;
+    cout << "ConcreteDecoratorA::ConcreteDecoratorA(" << &component << ")" << endl;
 }
 
 void ConcreteDecoratorA::Operation()
 {
     cout << "ConcreteDecoratorA::Operation()" << endl;
 
+    Decorator::Operation();
     cout << "addedState = " << ++addedState << endl;
 }
 

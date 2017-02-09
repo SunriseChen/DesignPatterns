@@ -8,7 +8,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Decorator {
 class ConcreteDecoratorB : public Decorator
 {
 public:
-    ConcreteDecoratorB(const std::shared_ptr<Component> &component);
+    ConcreteDecoratorB(Component &component);
 
     virtual void Operation();
     virtual void AddedBehavior() const;

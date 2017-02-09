@@ -2,6 +2,7 @@
 
 import os
 import shutil
+import atexit
 
 #### 项目设置开始 ####
 
@@ -64,5 +65,9 @@ for src_path in src_paths:
     objects.append(env.Object(target, src_path))
 
 env.Program(PROGRAM_NAME, objects)
-
 shutil.copy(PROGRAM_NAME + '.exe', os.curdir)
+
+def display_build_finished():
+    print('构建完成！')
+
+atexit.register(display_build_finished)

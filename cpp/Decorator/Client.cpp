@@ -1,8 +1,6 @@
 #include "Client.h"
 #include <iostream>
-#include "ConcreteComponent.h"
-#include "ConcreteDecoratorA.h"
-#include "ConcreteDecoratorB.h"
+#include "Component.h"
 
 using namespace std;
 
@@ -13,20 +11,11 @@ Client::Client()
     cout << "Client::Client()" << endl;
 }
 
-void Client::Run() const
+void Client::Run(Component &component) const
 {
-    cout << "Client::Run()" << endl;
+    cout << "Client::Run(" << &component << ")" << endl;
 
-    shared_ptr<Component> component = make_shared<ConcreteComponent>();
-    component->Operation();
-    cout << endl;
-
-    component = make_shared<ConcreteDecoratorA>(component);
-    component->Operation();
-    cout << endl;
-
-    component = make_shared<ConcreteDecoratorB>(component);
-    component->Operation();
+    component.Operation();
     cout << endl;
 }
 

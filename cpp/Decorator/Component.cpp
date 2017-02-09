@@ -10,9 +10,4 @@ Component::Component()
     cout << "Component::Component()" << endl;
 }
 
-void Component::Operation()
-{
-    cout << "Component::Operation()" << endl;
-}
-
 } } }

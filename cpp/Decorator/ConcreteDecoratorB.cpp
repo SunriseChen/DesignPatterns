@@ -5,10 +5,10 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Decorator {
 
-ConcreteDecoratorB::ConcreteDecoratorB(const shared_ptr<Component> &component)
+ConcreteDecoratorB::ConcreteDecoratorB(Component &component)
     : Decorator(component)
 {
-    cout << "ConcreteDecoratorB::ConcreteDecoratorB(" << component << ")" << endl;
+    cout << "ConcreteDecoratorB::ConcreteDecoratorB(" << &component << ")" << endl;
 }
 
 void ConcreteDecoratorB::Operation()

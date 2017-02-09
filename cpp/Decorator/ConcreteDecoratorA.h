@@ -10,7 +10,7 @@ class ConcreteDecoratorA : public Decorator
     int addedState;
 
 public:
-    ConcreteDecoratorA(const std::shared_ptr<Component> &component);
+    ConcreteDecoratorA(Component &component);
 
     virtual void Operation();
 };
