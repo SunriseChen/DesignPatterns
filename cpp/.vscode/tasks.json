@@ -2,9 +2,21 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "make",
-    "args": ["debug"],
     "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "Make",
+            "command": "make",
+            "args": ["debug"]
+        },
+        {
+            "taskName": "SCons",
+            "command": "scons",
+            "args": ["-Q", "release=0"],
+            "isShellCommand": true,
+            "isBuildCommand": true
+        }
+    ],
     "problemMatcher": {
         "owner": "cpp",
         "fileLocation": ["relative", "${workspaceRoot}"],

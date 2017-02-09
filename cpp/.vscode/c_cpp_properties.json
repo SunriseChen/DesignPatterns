@@ -22,7 +22,7 @@
                 "D:/Apps/MinGW/include", 
                 "D:/Apps/MinGW/lib/gcc/mingw32/5.3.0/include", 
                 "c:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include"
-            ],
+                ],
             "browse" : {
                 "limitSymbolsToIncludedHeaders" : true,
                 "databaseFilename" : ""

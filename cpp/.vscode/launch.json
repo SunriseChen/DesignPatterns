@@ -11,7 +11,7 @@
             "cwd": "${workspaceRoot}",
             "environment": [],
             "externalConsole": true,
-            "preLaunchTask": "make",
+            "preLaunchTask": "SCons",
             "linux": {
                 "MIMode": "gdb"
             },
