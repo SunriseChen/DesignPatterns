@@ -13,7 +13,7 @@ Client::Client()
 
 void Client::Run(Component &component) const
 {
-    cout << "Client::Run(" << &component << ")" << endl;
+    cout << "Client::Run(component = " << &component << ")" << endl;
 
     component.Operation();
     cout << endl;

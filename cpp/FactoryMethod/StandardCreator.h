@@ -8,6 +8,9 @@ template<class TProduct>
 class StandardCreator : public Creator
 {
 public:
+    StandardCreator();
+
+protected:
     virtual std::shared_ptr<Product> FactoryMethod() const;
 };
 

@@ -9,7 +9,7 @@ Decorator::Decorator(Component &component)
     : Component(), 
     component(component)
 {
-    cout << "Decorator::Decorator(" << &component << ")" << endl;
+    cout << "Decorator::Decorator(component = " << &component << ")" << endl;
 }
 
 void Decorator::Operation()

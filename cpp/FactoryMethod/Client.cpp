@@ -1,24 +1,23 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
+#include "Creator.h"
 
 using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace FactoryMethod {
 
-Client::Client(const shared_ptr<Creator> &creator)
-    : creator(creator)
+Client::Client()
 {
-    cout << "Client::Client(" << creator << ")" << endl;
+    cout << "Client::Client()" << endl;
 }
 
-void Client::Run() const
+void Client::Run(Creator &creator) const
 {
-    cout << "Client::Run()" << endl;
+    cout << "Client::Run(creator = " << &creator << ")" << endl;
 
-    creator->AnOperation();
-    auto product = creator->GetProduct();
-    product = creator->GetProduct();
+    creator.AnOperation();
+    auto product = creator.GetProduct();
+    product = creator.GetProduct();
 }
 
 } } }

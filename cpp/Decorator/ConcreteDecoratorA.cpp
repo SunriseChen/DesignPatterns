@@ -9,7 +9,7 @@ ConcreteDecoratorA::ConcreteDecoratorA(Component &component)
     : Decorator(component), 
     addedState(0)
 {
-    cout << "ConcreteDecoratorA::ConcreteDecoratorA(" << &component << ")" << endl;
+    cout << "ConcreteDecoratorA::ConcreteDecoratorA(component = " << &component << ")" << endl;
 }
 
 void ConcreteDecoratorA::Operation()

@@ -1,10 +1,9 @@
 #include "Show.h"
-#include <memory>
 #include <iostream>
 #include "Client.h"
 #include "ConcreteCreator.h"
-#include "ConcreteProduct.h"
 #include "StandardCreator.h"
+#include "ConcreteProduct.h"
 
 using namespace std;
 
@@ -17,14 +16,13 @@ Show::Show()
 
 void Show::DoRun() const
 {
-    shared_ptr<Creator> creator = make_shared<ConcreteCreator>();
-    auto client = make_shared<Client>(creator);
-    client->Run();
+    Client client;
+    ConcreteCreator concreteCreator;
+    client.Run(concreteCreator);
     cout << endl;
 
-    creator = make_shared<StandardCreator<ConcreteProduct>>();
-    client = make_shared<Client>(creator);
-    client->Run();
+    StandardCreator<ConcreteProduct> standardCreator;
+    client.Run(standardCreator);
     cout << endl;
 }
 

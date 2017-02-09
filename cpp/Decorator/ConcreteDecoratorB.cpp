@@ -8,7 +8,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Decorator {
 ConcreteDecoratorB::ConcreteDecoratorB(Component &component)
     : Decorator(component)
 {
-    cout << "ConcreteDecoratorB::ConcreteDecoratorB(" << &component << ")" << endl;
+    cout << "ConcreteDecoratorB::ConcreteDecoratorB(component = " << &component << ")" << endl;
 }
 
 void ConcreteDecoratorB::Operation()
