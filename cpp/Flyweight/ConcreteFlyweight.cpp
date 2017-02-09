@@ -9,12 +9,12 @@ ConcreteFlyweight::ConcreteFlyweight(int intrinsicState)
     : Flyweight(), 
     intrinsicState(intrinsicState)
 {
-    cout << "ConcreteFlyweight::ConcreteFlyweight(" << intrinsicState << ")" << endl;
+    cout << "ConcreteFlyweight::ConcreteFlyweight(intrinsicState = " << intrinsicState << ")" << endl;
 }
 
 void ConcreteFlyweight::Operation(int extrinsicState) const
 {
-    cout << "ConcreteFlyweight::Operation(" << extrinsicState << ")" << endl;
+    cout << "ConcreteFlyweight::Operation(extrinsicState = " << extrinsicState << ")" << endl;
 
     cout << intrinsicState << " + " << extrinsicState << " = " << intrinsicState + extrinsicState << endl;
 }

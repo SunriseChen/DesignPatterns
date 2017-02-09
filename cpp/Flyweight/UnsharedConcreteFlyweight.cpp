@@ -9,12 +9,12 @@ UnsharedConcreteFlyweight::UnsharedConcreteFlyweight(int allState)
     : Flyweight(), 
     allState(allState)
 {
-    cout << "UnsharedConcreteFlyweight::UnsharedConcreteFlyweight(" << allState << ")" << endl;
+    cout << "UnsharedConcreteFlyweight::UnsharedConcreteFlyweight(allState = " << allState << ")" << endl;
 }
 
 void UnsharedConcreteFlyweight::Operation(int extrinsicState) const
 {
-    cout << "UnsharedConcreteFlyweight::Operation(" << extrinsicState << ")" << endl;
+    cout << "UnsharedConcreteFlyweight::Operation(extrinsicState = " << extrinsicState << ")" << endl;
 
     cout << allState << " + " << extrinsicState << " = " << allState + extrinsicState << endl;
 }

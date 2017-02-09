@@ -1,5 +1,7 @@
 #include "FlyweightFactory.h"
 #include <iostream>
+#include "ConcreteFlyweight.h"
+#include "UnsharedConcreteFlyweight.h"
 
 using namespace std;
 
@@ -10,21 +12,24 @@ FlyweightFactory::FlyweightFactory()
     cout << "FlyweightFactory::FlyweightFactory()" << endl;
 }
 
-const shared_ptr<ConcreteFlyweight> & FlyweightFactory::GetFlyweight(int key, int intrinsicState)
+const FlyweightPtr & FlyweightFactory::GetFlyweight(int key, int intrinsicState)
 {
-    cout << "FlyweightFactory::GetFlyweight(" << key << ", " << intrinsicState << ")" << endl;
+    cout << "FlyweightFactory::GetFlyweight(key = " << key
+        << ", intrinsicState = " << intrinsicState << ")" << endl;
 
-    if (flyweights.count(key) == 0)
+    auto iter = flyweights.find(key);
+    if (iter == flyweights.end())
     {
-        flyweights[key] = make_shared<ConcreteFlyweight>(intrinsicState);
+        auto result = flyweights.insert(make_pair(key, make_shared<ConcreteFlyweight>(intrinsicState)));
+        iter = result.first;
     }
 
-    return flyweights[key];
+    return iter->second;
 }
 
-shared_ptr<UnsharedConcreteFlyweight> FlyweightFactory::CreateUnshared(int allState) const
+UnsharedFlyweightPtr FlyweightFactory::CreateUnshared(int allState) const
 {
-    cout << "FlyweightFactory::CreateUnshared(" << allState << ")" << endl;
+    cout << "FlyweightFactory::CreateUnshared(allState = " << allState << ")" << endl;
 
     return make_shared<UnsharedConcreteFlyweight>(allState);
 }

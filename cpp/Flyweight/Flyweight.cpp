@@ -10,9 +10,4 @@ Flyweight::Flyweight()
     cout << "Flyweight::Flyweight()" << endl;
 }
 
-void Flyweight::Operation(int extrinsicState) const
-{
-    cout << "Flyweight::Operation(" << extrinsicState << ")" << endl;
-}
-
 } } }

@@ -9,7 +9,7 @@ protected:
     Flyweight();
 
 public:
-    virtual void Operation(int extrinsicState) const;
+    virtual void Operation(int extrinsicState) const = 0;
 };
 
 } } }
