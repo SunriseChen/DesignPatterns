@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-import shutil
 import atexit
 
 #### 项目设置开始 ####
@@ -48,11 +47,11 @@ if not os.path.exists(bin_dir):
 
 PROGRAM_NAME = bin_dir + PROGRAM_NAME 
 
-env = Environment(CXXFLAGS=COMPILE_FLAGS, LINKFLAGS=LINK_FLAGS)
+env = Environment(tools=['mingw'], CPPFLAGS=COMPILE_FLAGS, LINKFLAGS=LINK_FLAGS)
 if release:
-    env.Append(CXXFLAGS=RELEASE_COMPILE_FLAGS, LINKFLAGS=RELEASE_LINK_FLAGS)
+    env.Append(CPPFLAGS=RELEASE_COMPILE_FLAGS, LINKFLAGS=RELEASE_LINK_FLAGS)
 else:
-    env.Append(CXXFLAGS=DEBUG_COMPILE_FLAGS, LINKFLAGS=DEBUG_LINK_FLAGS)
+    env.Append(CPPFLAGS=DEBUG_COMPILE_FLAGS, LINKFLAGS=DEBUG_LINK_FLAGS)
 
 src_paths = []
 for (dirpath, dirnames, filenames) in os.walk(src_dir):
@@ -65,9 +64,10 @@ for src_path in src_paths:
     objects.append(env.Object(target, src_path))
 
 env.Program(PROGRAM_NAME, objects)
-shutil.copy(PROGRAM_NAME + '.exe', os.curdir)
 
-def display_build_finished():
+def _display_build_finished():
+    import shutil
+    shutil.copy(PROGRAM_NAME + '.exe', os.curdir)
     print('构建完成！')
 
-atexit.register(display_build_finished)
+atexit.register(_display_build_finished)
