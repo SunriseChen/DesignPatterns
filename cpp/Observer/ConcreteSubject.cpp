@@ -21,7 +21,7 @@ int ConcreteSubject::GetState() const
 
 void ConcreteSubject::SetState(int state)
 {
-    cout << "ConcreteSubject::SetState(" << state << ")" << endl;
+    cout << "ConcreteSubject::SetState(state = " << state << ")" << endl;
 
     this->state = state;
     Notify();

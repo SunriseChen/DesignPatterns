@@ -1,6 +1,7 @@
 #include <iostream>
 #include <unordered_set>
 #include <string>
+#include <stdio.h>
 
 #include "Utilities.h"
 #include "AbstractFactory/Show.h"
@@ -50,12 +51,6 @@ void Run(const ShowName &names)
     }
 }
 
-void PressAnyKey()
-{
-    char c;
-    cin >> c;
-}
-
 int main(int argc, char *argv[])
 {
     if (argc > 1)
@@ -103,7 +98,7 @@ int main(int argc, char *argv[])
         ShowHelp(program);
     }
 
-    PressAnyKey();
+    getchar();
 
     return 0;
 }

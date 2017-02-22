@@ -1,6 +1,7 @@
 #include "Subject.h"
 #include <iostream>
 #include <algorithm>
+#include "Observer.h"
 
 using namespace std;
 

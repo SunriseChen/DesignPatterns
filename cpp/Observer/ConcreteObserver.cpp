@@ -1,5 +1,6 @@
 #include "ConcreteObserver.h"
 #include <iostream>
+#include "ConcreteSubject.h"
 
 using namespace std;
 
@@ -7,10 +8,10 @@ namespace Sunrise { namespace DesignPatterns { namespace Observer {
 
 ConcreteObserver::ConcreteObserver(ConcreteSubject &subject)
     : Observer(), 
-    state(0), 
-    subject(subject)
+    subject(subject),
+    state(0)
 {
-    cout << "ConcreteObserver::ConcreteObserver(" << &subject << ")" << endl;
+    cout << "ConcreteObserver::ConcreteObserver(subject = " << &subject << ")" << endl;
 }
 
 void ConcreteObserver::Update()
