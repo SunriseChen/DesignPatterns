@@ -1,5 +1,4 @@
 #include "Show.h"
-#include <iostream>
 #include "Client.h"
 #include "ConcretePrototype1.h"
 #include "ConcretePrototype2.h"
@@ -15,15 +14,12 @@ Show::Show()
 
 void Show::DoRun() const
 {
-    shared_ptr<Prototype> prototype = make_shared<ConcretePrototype1>();
-    auto client = make_shared<Client>(prototype);
-    client->Operation();
-    cout << endl;
+    Client client;
+    ConcretePrototype1 prototype1;
+    client.Operation(prototype1);
 
-    prototype = make_shared<ConcretePrototype2>();
-    client = make_shared<Client>(prototype);
-    client->Operation();
-    cout << endl;
+    ConcretePrototype2 prototype2;
+    client.Operation(prototype2);
 }
 
 } } }

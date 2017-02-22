@@ -7,11 +7,12 @@ namespace Sunrise { namespace DesignPatterns { namespace Prototype {
 // 声明一个克隆自身的接口。
 class Prototype
 {
-public:
+protected:
     Prototype();
     Prototype(const Prototype &other);
 
-    virtual std::shared_ptr<Prototype> Clone() const;
+public:
+    virtual std::shared_ptr<Prototype> Clone() const = 0;
 };
 
 } } }

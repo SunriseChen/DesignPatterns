@@ -1,5 +1,4 @@
 #include "ConcretePrototype1.h"
-#include <memory>
 #include <iostream>
 
 using namespace std;
@@ -15,7 +14,7 @@ ConcretePrototype1::ConcretePrototype1()
 ConcretePrototype1::ConcretePrototype1(const ConcretePrototype1 &other)
     : Prototype(other)
 {
-    cout << "ConcretePrototype1::ConcretePrototype1(" << &other << ")" << endl;
+    cout << "ConcretePrototype1::ConcretePrototype1(other = " << &other << ")" << endl;
 }
 
 shared_ptr<Prototype> ConcretePrototype1::Clone() const

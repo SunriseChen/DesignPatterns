@@ -1,22 +1,23 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
+#include "Prototype.h"
 
 using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Prototype {
 
-Client::Client(const shared_ptr<Prototype> &prototype)
-    : prototype(prototype)
+Client::Client()
 {
-    cout << "Client::Client(" << prototype << ")" << endl;
+    cout << "Client::Client()" << endl;
 }
 
-void Client::Operation() const
+void Client::Operation(const Prototype &prototype) const
 {
-    cout << "Client::Operation()" << endl;
+    cout << "Client::Operation(prototype = " << &prototype << ")" << endl;
 
-    auto clone = prototype->Clone();
+    auto clone = prototype.Clone();
+    cout << "clone = " << clone << endl;
+    cout << endl;
 }
 
 } } }
