@@ -13,6 +13,7 @@ public:
 
     virtual void OperationA() const;
     virtual void OperationB() const;
+    virtual void OperationC() const;
 };
 
 } } }

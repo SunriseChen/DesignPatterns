@@ -1,5 +1,6 @@
 #include "ConcreteColleague2.h"
 #include <iostream>
+#include "Mediator.h"
 
 using namespace std;
 

@@ -31,4 +31,9 @@ void ConcreteMediator::OperationB() const
     colleague.OperationG();
 }
 
+void ConcreteMediator::OperationC() const
+{
+    cout << "ConcreteMediator::OperationC()" << endl;
+}
+
 } } }

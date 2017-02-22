@@ -10,19 +10,4 @@ Mediator::Mediator()
     cout << "Mediator::Mediator()" << endl;
 }
 
-void Mediator::OperationA() const
-{
-    cout << "Mediator::OperationA()" << endl;
-}
-
-void Mediator::OperationB() const
-{
-    cout << "Mediator::OperationB()" << endl;
-}
-
-void Mediator::OperationC() const
-{
-    cout << "Mediator::OperationC()" << endl;
-}
-
 } } }

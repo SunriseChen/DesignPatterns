@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/bin/debug/DesignPatterns.exe",
-            "args": [ "Iterator" ],
+            "args": [ "Mediator" ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
