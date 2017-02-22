@@ -1,11 +1,10 @@
 #pragma once
 
 #include <memory>
-#include "State.h"
-#include "Memento.h"
 
 namespace Sunrise { namespace DesignPatterns { namespace Memento {
 
+class State;
 class Memento;
 
 // 原发器创建一个备忘录，用以记录当前时刻它的内部状态。

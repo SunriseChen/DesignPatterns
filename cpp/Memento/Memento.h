@@ -1,9 +1,10 @@
 #pragma once
 
 #include <memory>
-#include "Originator.h"
 
 namespace Sunrise { namespace DesignPatterns { namespace Memento {
+
+class State;
 
 // 备忘录存储原发器对象的内部状态。原发器根据需要决定备忘录存储原发器的哪些内部状态。
 // 防止原发器以外的其他对象访问备忘录。备忘录实际上有两个接口，管理者(caretaker)

@@ -1,7 +1,5 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
-#include "Memento.h"
 #include "Caretaker.h"
 
 using namespace std;
@@ -18,8 +16,13 @@ void Client::Run() const
     cout << "Client::Run()" << endl;
 
     Caretaker caretaker;
+    cout << endl;
+
     caretaker.Execute();
+    cout << endl;
+
     caretaker.Unexecute();
+    cout << endl;
 }
 
 } } }

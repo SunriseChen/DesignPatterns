@@ -1,5 +1,7 @@
 #include "Originator.h"
 #include <iostream>
+#include "State.h"
+#include "Memento.h"
 
 using namespace std;
 
