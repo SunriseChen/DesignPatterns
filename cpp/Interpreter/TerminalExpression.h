@@ -11,7 +11,7 @@ class TerminalExpression : public AbstractExpression
 public:
     TerminalExpression();
 
-    virtual void Interpret(const std::shared_ptr<Context> &context) const;
+    virtual void Interpret(Context &context) const;
 };
 
 } } }

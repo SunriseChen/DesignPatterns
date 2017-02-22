@@ -5,8 +5,8 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/DesignPatterns.exe",
-            "args": [ "Flyweight" ],
+            "program": "${workspaceRoot}/bin/debug/DesignPatterns.exe",
+            "args": [ "Interpreter" ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
@@ -27,7 +27,7 @@
             "name": "C++ Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceRoot}/DesignPatterns.exe",
+            "program": "${workspaceRoot}/bin/debug/DesignPatterns.exe",
             "processId": "${command.pickProcess}",
             "linux": {
                 "MIMode": "gdb"

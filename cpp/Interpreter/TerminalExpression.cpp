@@ -1,5 +1,6 @@
 #include "TerminalExpression.h"
 #include <iostream>
+#include "Context.h"
 
 using namespace std;
 
@@ -11,11 +12,11 @@ TerminalExpression::TerminalExpression()
     cout << "TerminalExpression::TerminalExpression()" << endl;
 }
 
-void TerminalExpression::Interpret(const shared_ptr<Context> &context) const
+void TerminalExpression::Interpret(Context &context) const
 {
-    cout << "TerminalExpression::Interpret(context = " << context << ")" << endl;
+    cout << "TerminalExpression::Interpret(context = " << &context << ")" << endl;
 
-    context->Add("TerminalExpression::Interpret");
+    context.Add("TerminalExpression::Interpret");
 }
 
 } } }

@@ -1,5 +1,4 @@
 #include "Show.h"
-#include <memory>
 #include <iostream>
 #include "Client.h"
 #include "TerminalExpression.h"
@@ -16,9 +15,9 @@ Show::Show()
 
 void Show::DoRun() const
 {
-    auto left = make_shared<TerminalExpression>();
-    auto right = make_shared<TerminalExpression>();
-    auto expression = make_shared<NonterminalExpression>(left, right);
+    TerminalExpression left;
+    TerminalExpression right;
+    NonterminalExpression expression(left, right);
     Client client;
     client.Run(expression);
 }

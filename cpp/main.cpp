@@ -56,14 +56,14 @@ void PressAnyKey()
     cin >> c;
 }
 
-int main(int argc, char *args[])
+int main(int argc, char *argv[])
 {
     if (argc > 1)
     {
         ShowName names;
         for (int i = 0; i < argc - 1; ++i)
         {
-            string name(args[i + 1]);
+            string name(argv[i + 1]);
             to_lower(trim(name));
             names.insert(name);
         }
@@ -94,7 +94,7 @@ int main(int argc, char *args[])
     }
     else
     {
-        string program(args[0]);
+        string program(argv[0]);
         auto pos = program.find_last_of("/\\");
         if (pos != string::npos)
         {

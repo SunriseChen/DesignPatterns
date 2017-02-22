@@ -1,6 +1,5 @@
 #pragma once
 
-#include <memory>
 #include "AbstractExpression.h"
 
 namespace Sunrise { namespace DesignPatterns { namespace Interpreter {
@@ -13,7 +12,7 @@ class Client
 public:
     Client();
 
-    void Run(const std::shared_ptr<AbstractExpression> &expression) const;
+    void Run(const AbstractExpression &expression) const;
 };
 
 } } }

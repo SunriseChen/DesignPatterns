@@ -1,5 +1,4 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
 #include "Context.h"
 
@@ -12,13 +11,14 @@ Client::Client()
     cout << "Client::Client()" << endl;
 }
 
-void Client::Run(const shared_ptr<AbstractExpression> &expression) const
+void Client::Run(const AbstractExpression &expression) const
 {
-    cout << "Client::Run()" << endl;
+    cout << "Client::Run(expression = " << &expression << ")" << endl;
 
-    auto context = make_shared<Context>();
-    expression->Interpret(context);
-    cout << "Context = " << context->GetResult() << endl;
+    Context context;
+    expression.Interpret(context);
+    cout << "Context = " << context.GetResult() << endl;
+    cout << endl;
 }
 
 } } }

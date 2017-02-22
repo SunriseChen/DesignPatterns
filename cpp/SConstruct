@@ -66,8 +66,6 @@ for src_path in src_paths:
 env.Program(PROGRAM_NAME, objects)
 
 def _display_build_finished():
-    import shutil
-    shutil.copy(PROGRAM_NAME + '.exe', os.curdir)
-    print('构建完成！')
+    print('Build finished !')
 
 atexit.register(_display_build_finished)

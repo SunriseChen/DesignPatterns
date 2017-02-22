@@ -9,13 +9,12 @@ namespace Sunrise { namespace DesignPatterns { namespace Interpreter {
 // 为文法中的非终结符实现解释(Interpret)操作。解释(Interpret)一般要递归地调用表示 R1 到 Rn 的那些对象的解释操作。
 class NonterminalExpression : public AbstractExpression
 {
-    std::shared_ptr<AbstractExpression> left, right;
+    const AbstractExpression &left, &right;
 
 public:
-    NonterminalExpression(const std::shared_ptr<AbstractExpression> &left, 
-        const std::shared_ptr<AbstractExpression> &right);
+    NonterminalExpression(const AbstractExpression &left, const AbstractExpression &right);
 
-    virtual void Interpret(const std::shared_ptr<Context> &context) const;
+    virtual void Interpret(Context &context) const;
 };
 
 } } }
