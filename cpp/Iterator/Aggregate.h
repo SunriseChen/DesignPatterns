@@ -10,7 +10,9 @@ template<class TItem>
 class Aggregate
 {
 public:
-    virtual std::unique_ptr<Iterator<TItem>> CreateIterator() = 0;
+    typedef std::unique_ptr<Iterator<TItem>> IteratorPtr;
+
+    virtual IteratorPtr CreateIterator() = 0;
 
 protected:
     Aggregate();

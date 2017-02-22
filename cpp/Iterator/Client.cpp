@@ -15,6 +15,7 @@ void Client::Run(Aggregate<int> &aggregate) const
     cout << "Client::Run(aggregate = " << &aggregate << ")" << endl;
 
     auto iterator = aggregate.CreateIterator();
+    cout << endl;
 
     iterator->First();
     while (!iterator->IsDone())
@@ -24,12 +25,14 @@ void Client::Run(Aggregate<int> &aggregate) const
         item = item * item;
         iterator->Next();
     }
+    cout << endl;
 
     for (iterator->First(); !iterator->IsDone(); iterator->Next())
     {
         auto item = iterator->CurrentItem();
         cout << "\titem = " << item << endl;
     }
+    cout << endl;
 }
 
 } } }

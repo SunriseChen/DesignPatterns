@@ -6,7 +6,7 @@
 namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 
 template<class TItem>
-ConcreteAggregate<TItem>::ConcreteAggregate(std::vector<TItem> &&data)
+ConcreteAggregate<TItem>::ConcreteAggregate(DataType &&data)
     : Aggregate<TItem>(), 
     data(data)
 {
@@ -16,13 +16,13 @@ ConcreteAggregate<TItem>::ConcreteAggregate(std::vector<TItem> &&data)
 }
 
 template<class TItem>
-std::unique_ptr<Iterator<TItem>> ConcreteAggregate<TItem>::CreateIterator()
+typename Aggregate<TItem>::IteratorPtr ConcreteAggregate<TItem>::CreateIterator()
 {
     using namespace std;
 
     cout << "ConcreteAggregate<TItem>::CreateIterator()" << endl;
 
-    return unique_ptr<Iterator<TItem>>(new ConcreteIterator<TItem>(*this));
+    return typename Aggregate<TItem>::IteratorPtr(new ConcreteIterator<TItem>(*this));
 }
 
 template<class TItem>

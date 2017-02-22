@@ -9,12 +9,14 @@ namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 template<class TItem>
 class ConcreteAggregate : public Aggregate<TItem>
 {
-    std::vector<TItem> data;
+    typedef std::vector<TItem> DataType;
+
+    DataType data;
 
 public:
-    ConcreteAggregate(std::vector<TItem> &&data);
+    ConcreteAggregate(DataType &&data);
 
-    virtual std::unique_ptr<Iterator<TItem>> CreateIterator();
+    virtual typename Aggregate<TItem>::IteratorPtr CreateIterator();
     virtual long Count() const;
     virtual TItem & Get(long index);
 };
