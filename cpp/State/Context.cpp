@@ -1,5 +1,6 @@
 #include "Context.h"
 #include <iostream>
+#include "State.h"
 
 using namespace std;
 
@@ -23,7 +24,7 @@ void Context::Request() const
 
 void Context::Change(State *state)
 {
-    cout << "Context::Change(" << state << ")" << endl;
+    cout << "Context::Change(state = " << state << ")" << endl;
 
     this->state = state;
 }

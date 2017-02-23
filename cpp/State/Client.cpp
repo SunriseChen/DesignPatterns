@@ -20,10 +20,15 @@ void Client::Run() const
     Context context;
     ConcreteStateA stateA;
     ConcreteStateB stateB;
+    cout << endl;
+
     context.Change(&stateA);
     context.Request();
+    cout << endl;
+
     context.Change(&stateB);
     context.Request();
+    cout << endl;
 }
 
 } } }

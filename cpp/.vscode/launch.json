@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/bin/debug/DesignPatterns.exe",
-            "args": [ "Singleton" ],
+            "args": [ "State" ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],
