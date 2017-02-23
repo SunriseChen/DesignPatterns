@@ -1,7 +1,6 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
-#include "ConcreteClass.h"
+#include "AbstractClass.h"
 
 using namespace std;
 
@@ -12,12 +11,12 @@ Client::Client()
     cout << "Client::Client()" << endl;
 }
 
-void Client::Run() const
+void Client::Run(const AbstractClass &abstractClass) const
 {
-    cout << "Client::Run()" << endl;
+    cout << "Client::Run(abstractClass = " << &abstractClass << ")" << endl;
 
-    shared_ptr<AbstractClass> abstractClass = make_shared<ConcreteClass>();
-    abstractClass->TemplateMethod();
+    abstractClass.TemplateMethod();
+    cout << endl;
 }
 
 } } }

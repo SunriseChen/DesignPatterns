@@ -21,14 +21,4 @@ void AbstractClass::TemplateMethod() const
     cout << "..." << endl;
 }
 
-void AbstractClass::PrimitiveOperation1() const
-{
-    cout << "AbstractClass::PrimitiveOperation1()" << endl;
-}
-
-void AbstractClass::PrimitiveOperation2() const
-{
-    cout << "AbstractClass::PrimitiveOperation2()" << endl;
-}
-
 } } }

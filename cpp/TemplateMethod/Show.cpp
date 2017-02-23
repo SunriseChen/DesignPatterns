@@ -1,6 +1,6 @@
 #include "Show.h"
-#include <iostream>
 #include "Client.h"
+#include "ConcreteClass.h"
 
 using namespace std;
 
@@ -14,7 +14,8 @@ Show::Show()
 void Show::DoRun() const
 {
     Client client;
-    client.Run();
+    ConcreteClass concreteClass;
+    client.Run(concreteClass);
 }
 
 } } }

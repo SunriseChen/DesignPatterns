@@ -6,14 +6,14 @@ namespace Sunrise { namespace DesignPatterns { namespace TemplateMethod {
 // 实现一个模板方法，定义一个算法的骨架。该模板方法不仅调用原语操作，也调用定义在 AbstractClass 或其他对象中的操作。
 class AbstractClass
 {
-public:
+protected:
     AbstractClass();
 
-    void TemplateMethod() const;
+    virtual void PrimitiveOperation1() const = 0;
+    virtual void PrimitiveOperation2() const = 0;
 
-protected:
-    virtual void PrimitiveOperation1() const;
-    virtual void PrimitiveOperation2() const;
+public:
+    void TemplateMethod() const;
 };
 
 } } }
