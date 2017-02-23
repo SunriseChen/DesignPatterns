@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "Aggregate.h"
 #include <vector>
@@ -17,8 +17,8 @@ public:
     ConcreteAggregate(DataType &&data);
 
     virtual typename Aggregate<TItem>::IteratorPtr CreateIterator();
-    virtual long Count() const;
-    virtual TItem & Get(long index);
+    virtual size_t Count() const;
+    virtual TItem & Get(size_t index);
 };
 
 } } }

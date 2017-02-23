@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "Iterator.h"
 #include "ConcreteAggregate.h"
@@ -11,7 +11,7 @@ template<typename TItem>
 class ConcreteIterator : public Iterator<TItem>
 {
     ConcreteAggregate<TItem> &aggregate_;
-    long currentIndex_;
+    size_t currentIndex_;
 
 public:
     ConcreteIterator(ConcreteAggregate<TItem> &aggregate);

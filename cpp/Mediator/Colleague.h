@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 namespace Sunrise { namespace DesignPatterns { namespace Mediator {
 

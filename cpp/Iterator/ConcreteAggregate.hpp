@@ -26,7 +26,7 @@ typename Aggregate<TItem>::IteratorPtr ConcreteAggregate<TItem>::CreateIterator(
 }
 
 template<typename TItem>
-long ConcreteAggregate<TItem>::Count() const
+size_t ConcreteAggregate<TItem>::Count() const
 {
     using namespace std;
 
@@ -36,7 +36,7 @@ long ConcreteAggregate<TItem>::Count() const
 }
 
 template<typename TItem>
-TItem & ConcreteAggregate<TItem>::Get(long index)
+TItem & ConcreteAggregate<TItem>::Get(size_t index)
 {
     using namespace std;
 

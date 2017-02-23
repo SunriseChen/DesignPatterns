@@ -33,3 +33,6 @@
 
 # SCons
 .sconsign.dblite
+
+# MSVC
+*.pdb

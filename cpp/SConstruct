@@ -11,22 +11,44 @@ PROGRAM_NAME = 'DesignPatterns'
 # 项目中使用的源文件扩展名
 SRC_EXT = 'cpp'
 
-# 一般的编译选项
-COMPILE_FLAGS = ['-std=c++11', '-Wall', '-Wextra']
-# 附加的 Release 编译选项
-# https://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc/Optimize-Options.html
-RELEASE_COMPILE_FLAGS = ['-D NDEBUG', '-O2']
-# 附加的 Debug 编译选项
-# https://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc/Debugging-Options.html
-DEBUG_COMPILE_FLAGS = ['-D DEBUG', '-g']
+COMPILER = 'msvc'
+if COMPILER == 'msvc':
+    TOOLS = ['default']
 
-# 一般的连接选项
-# https://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc/Link-Options.html
-LINK_FLAGS = ['']
-# 附加的 Release 连接选项
-RELEASE_LINK_FLAGS = ['-s']
-# 附加的 Debug 连接选项
-DEBUG_LINK_FLAGS = ['']
+    # 一般的编译选项
+    # https://msdn.microsoft.com/zh-cn/library/fwkeyyhe.aspx
+    COMPILE_FLAGS = ['/EHsc', '/W4', '/WX']
+    # 附加的 Release 编译选项
+    RELEASE_COMPILE_FLAGS = ['/MT', '/Ox']
+    # 附加的 Debug 编译选项
+    DEBUG_COMPILE_FLAGS = ['/MTd', '/Od', '/Zi']
+
+    # 一般的连接选项
+    # https://msdn.microsoft.com/zh-cn/library/y0zzbyt4.aspx
+    LINK_FLAGS = ['']
+    # 附加的 Release 连接选项
+    RELEASE_LINK_FLAGS = ['']
+    # 附加的 Debug 连接选项
+    DEBUG_LINK_FLAGS = ['']
+else:
+    TOOLS = ['mingw']
+
+    # 一般的编译选项
+    COMPILE_FLAGS = ['-std=c++11', '-Wall', '-Wextra']
+    # 附加的 Release 编译选项
+    # https://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc/Optimize-Options.html
+    RELEASE_COMPILE_FLAGS = ['-D NDEBUG', '-O2']
+    # 附加的 Debug 编译选项
+    # https://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc/Debugging-Options.html
+    DEBUG_COMPILE_FLAGS = ['-D DEBUG', '-g']
+
+    # 一般的连接选项
+    # https://gcc.gnu.org/onlinedocs/gcc-6.3.0/gcc/Link-Options.html
+    LINK_FLAGS = ['']
+    # 附加的 Release 连接选项
+    RELEASE_LINK_FLAGS = ['-s']
+    # 附加的 Debug 连接选项
+    DEBUG_LINK_FLAGS = ['']
 
 #### 项目设置结束 ####
 
@@ -47,7 +69,7 @@ if not os.path.exists(bin_dir):
 
 PROGRAM_NAME = bin_dir + PROGRAM_NAME 
 
-env = Environment(tools=['mingw'], CPPFLAGS=COMPILE_FLAGS, LINKFLAGS=LINK_FLAGS)
+env = Environment(tools=TOOLS, CPPFLAGS=COMPILE_FLAGS, LINKFLAGS=LINK_FLAGS)
 if release:
     env.Append(CPPFLAGS=RELEASE_COMPILE_FLAGS, LINKFLAGS=RELEASE_LINK_FLAGS)
 else:
