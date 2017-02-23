@@ -7,7 +7,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Proxy {
 
 Proxy::Proxy(const Subject &realSubject)
     : Subject(), 
-    realSubject(realSubject)
+    realSubject_(realSubject)
 {
     cout << "Proxy::Proxy(realSubject = " << &realSubject << ")" << endl;
 }
@@ -16,7 +16,7 @@ void Proxy::Request() const
 {
     cout << "Proxy::Request()" << endl;
 
-    realSubject.Request();
+    realSubject_.Request();
 }
 
 } } }

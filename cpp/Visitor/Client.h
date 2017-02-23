@@ -7,7 +7,7 @@ class Visitor;
 
 class Client
 {
-    const ObjectStructure &objectStructure;
+    const ObjectStructure &objectStructure_;
 
 public:
     Client(const ObjectStructure &objectStructure);

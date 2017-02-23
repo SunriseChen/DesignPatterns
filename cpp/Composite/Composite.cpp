@@ -16,36 +16,37 @@ void Composite::Operation() const
 {
     cout << "Composite::Operation()" << endl;
 
-    for_each(children.begin(), children.end(), 
-        [](const shared_ptr<Component> &component){ component->Operation(); });
+    for_each(children_.begin(), children_.end(), [](const ComponentPtr &component) {
+        component->Operation();
+    });
 }
 
 void Composite::Add(const ComponentPtr &component)
 {
     cout << "Composite::Add(component = " << component << ")" << endl;
 
-    children.push_back(component);
+    children_.push_back(component);
 }
 
 void Composite::Remove(const ComponentPtr &component)
 {
     cout << "Composite::Remove(component = " << component << ")" << endl;
 
-    children.remove(component);
+    children_.remove(component);
 }
 
 const ComponentList & Composite::GetChildren() const
 {
     cout << "Composite::GetChildren()" << endl;
 
-    return children;
+    return children_;
 }
 
 const ComponentPtr & Composite::GetChild(int index) const
 {
     cout << "Composite::GetChild(index = " << index << ")" << endl;
 
-    return *next(children.begin(), index);
+    return *next(children_.begin(), index);
 }
 
 } } }

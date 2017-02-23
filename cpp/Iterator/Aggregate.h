@@ -9,13 +9,13 @@ namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 template<typename TItem>
 class Aggregate
 {
+protected:
+    Aggregate();
+
 public:
     typedef std::unique_ptr<Iterator<TItem>> IteratorPtr;
 
     virtual IteratorPtr CreateIterator() = 0;
-
-protected:
-    Aggregate();
 };
 
 } } }

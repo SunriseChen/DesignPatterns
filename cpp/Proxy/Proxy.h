@@ -13,7 +13,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Proxy {
 // • Protection Proxy 检查调用者是否具有实现一个请求所必需的访问权限。
 class Proxy : public Subject
 {
-    const Subject &realSubject;
+    const Subject &realSubject_;
 
 public:
     Proxy(const Subject &realSubject);

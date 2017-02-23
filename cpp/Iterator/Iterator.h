@@ -6,14 +6,14 @@ namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 template<typename TItem>
 class Iterator
 {
+protected:
+    Iterator();
+
 public:
     virtual void First() = 0;
     virtual void Next() = 0;
     virtual bool IsDone() const = 0;
     virtual TItem & CurrentItem() = 0;
-
-protected:
-    Iterator();
 };
 
 } } }

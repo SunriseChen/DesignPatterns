@@ -9,7 +9,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Interpreter {
 // 为文法中的非终结符实现解释(Interpret)操作。解释(Interpret)一般要递归地调用表示 R1 到 Rn 的那些对象的解释操作。
 class NonterminalExpression : public AbstractExpression
 {
-    const AbstractExpression &left, &right;
+    const AbstractExpression &left_, &right_;
 
 public:
     NonterminalExpression(const AbstractExpression &left, const AbstractExpression &right);

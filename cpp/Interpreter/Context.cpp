@@ -12,13 +12,13 @@ Context::Context()
 
 void Context::Add(const std::string & line)
 {
-    result.append("\n\t");
-    result.append(line);
+    result_.append("\n\t");
+    result_.append(line);
 }
 
 const string & Context::GetResult() const
 {
-    return result;
+    return result_;
 }
 
 } } }

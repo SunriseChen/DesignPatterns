@@ -11,7 +11,7 @@ class ConcreteAggregate : public Aggregate<TItem>
 {
     typedef std::vector<TItem> DataType;
 
-    DataType data;
+    DataType data_;
 
 public:
     ConcreteAggregate(DataType &&data);

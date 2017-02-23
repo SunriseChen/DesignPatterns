@@ -15,13 +15,13 @@ void ConcreteBuilder::BuildPart(const string &part)
 {
     cout << "ConcreteBuilder::BuildPart(part = \"" << part << "\")" << endl;
 
-    if (result.empty())
+    if (result_.empty())
     {
-        result = part;
+        result_ = part;
     }
     else
     {
-        result += " " + part;
+        result_ += " " + part;
     }
 }
 
@@ -29,7 +29,7 @@ const string & ConcreteBuilder::GetResult() const
 {
     cout << "ConcreteBuilder::GetResult()" << endl;
 
-    return result;
+    return result_;
 }
 
 } } }

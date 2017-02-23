@@ -9,8 +9,8 @@ namespace Sunrise { namespace DesignPatterns { namespace Interpreter {
 NonterminalExpression::NonterminalExpression(const AbstractExpression &left, 
     const AbstractExpression &right)
     : AbstractExpression(), 
-    left(left), 
-    right(right)
+    left_(left), 
+    right_(right)
 {
     cout << "NonterminalExpression::NonterminalExpression(left = " << &left
          << ", right = " << &right << ")" << endl;
@@ -22,9 +22,9 @@ void NonterminalExpression::Interpret(Context &context) const
 
     context.Add("NonterminalExpression::Interpret");
     context.Add("left");
-    left.Interpret(context);
+    left_.Interpret(context);
     context.Add("right");
-    right.Interpret(context);
+    right_.Interpret(context);
 }
 
 } } }

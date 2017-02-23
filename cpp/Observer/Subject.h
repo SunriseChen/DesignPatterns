@@ -11,7 +11,7 @@ typedef std::list<Observer *> Observers;
 // 提供注册和删除观察者对象的接口。
 class Subject
 {
-    Observers observers;
+    Observers observers_;
 
 protected:
     Subject();

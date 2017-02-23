@@ -8,7 +8,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 template<typename TItem>
 ConcreteAggregate<TItem>::ConcreteAggregate(DataType &&data)
     : Aggregate<TItem>(), 
-    data(data)
+    data_(data)
 {
     using namespace std;
 
@@ -32,7 +32,7 @@ long ConcreteAggregate<TItem>::Count() const
 
     cout << "ConcreteAggregate<TItem>::Count()" << endl;
 
-    return data.size();
+    return data_.size();
 }
 
 template<typename TItem>
@@ -42,7 +42,7 @@ TItem & ConcreteAggregate<TItem>::Get(long index)
 
     cout << "ConcreteAggregate<TItem>::Get(index = " << index << ")" << endl;
 
-    return data[index];
+    return data_[index];
 }
 
 } } }

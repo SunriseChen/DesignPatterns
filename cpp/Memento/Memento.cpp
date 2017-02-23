@@ -5,24 +5,24 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Memento {
 
-Memento::Memento(const shared_ptr<State> &state)
-    : state(state)
+Memento::Memento(const StatePtr &state)
+    : state_(state)
 {
     cout << "Memento::Memento(state = " << state << ")" << endl;
 }
 
-shared_ptr<State> Memento::GetState() const
+StatePtr Memento::GetState() const
 {
     cout << "Memento::GetState()" << endl;
 
-    return state;
+    return state_;
 }
 
-void Memento::SetState(const shared_ptr<State> &state)
+void Memento::SetState(const StatePtr &state)
 {
     cout << "Memento::SetState(state = " << state << ")" << endl;
 
-    this->state = state;
+    state_ = state;
 }
 
 } } }

@@ -15,12 +15,12 @@ FlyweightFactory::FlyweightFactory()
 const FlyweightPtr & FlyweightFactory::GetFlyweight(int key, int intrinsicState)
 {
     cout << "FlyweightFactory::GetFlyweight(key = " << key
-        << ", intrinsicState = " << intrinsicState << ")" << endl;
+         << ", intrinsicState = " << intrinsicState << ")" << endl;
 
-    auto iter = flyweights.find(key);
-    if (iter == flyweights.end())
+    auto iter = flyweights_.find(key);
+    if (iter == flyweights_.end())
     {
-        auto result = flyweights.insert(make_pair(key, make_shared<ConcreteFlyweight>(intrinsicState)));
+        auto result = flyweights_.insert(make_pair(key, make_shared<ConcreteFlyweight>(intrinsicState)));
         iter = result.first;
     }
 

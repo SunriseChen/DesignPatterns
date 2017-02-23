@@ -10,7 +10,7 @@ class Builder;
 // 构造一个使用 Builder 接口的对象。
 class Director
 {
-    Builder &builder;
+    Builder &builder_;
 
 public:
     Director(Builder &builder);

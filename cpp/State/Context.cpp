@@ -7,7 +7,7 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace State {
 
 Context::Context()
-    : state(nullptr)
+    : state_(nullptr)
 {
     cout << "Context::Context()" << endl;
 }
@@ -16,9 +16,9 @@ void Context::Request() const
 {
     cout << "Context::Request()" << endl;
 
-    if (state)
+    if (state_)
     {
-        state->Handle();
+        state_->Handle();
     }
 }
 
@@ -26,7 +26,7 @@ void Context::Change(State *state)
 {
     cout << "Context::Change(state = " << state << ")" << endl;
 
-    this->state = state;
+    state_ = state;
 }
 
 } } }

@@ -11,7 +11,7 @@ public:
     ConcreteCreator();
 
 protected:
-    virtual std::shared_ptr<Product> FactoryMethod() const;
+    virtual ProductPtr FactoryMethod() const;
 };
 
 } } }

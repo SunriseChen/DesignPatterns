@@ -9,7 +9,7 @@ class Strategy;
 // 可定义一个接口来让 Stategy 访问它的数据。
 class Context
 {
-    Strategy *strategy;
+    Strategy *strategy_;
 
 public:
     Context(Strategy *strategy);
@@ -22,7 +22,7 @@ public:
 template<typename TStrategy>
 class ContextT
 {
-    TStrategy strategy;
+    TStrategy strategy_;
 
 public:
     ContextT();

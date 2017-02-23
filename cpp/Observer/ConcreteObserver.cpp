@@ -8,8 +8,8 @@ namespace Sunrise { namespace DesignPatterns { namespace Observer {
 
 ConcreteObserver::ConcreteObserver(ConcreteSubject &subject)
     : Observer(), 
-    subject(subject),
-    state(0)
+    subject_(subject),
+    state_(0)
 {
     cout << "ConcreteObserver::ConcreteObserver(subject = " << &subject << ")" << endl;
 }
@@ -18,21 +18,21 @@ void ConcreteObserver::Update()
 {
     cout << "ConcreteObserver::Update()" << endl;
 
-    state = subject.GetState();
+    state_ = subject_.GetState();
 }
 
 void ConcreteObserver::SetState()
 {
     cout << "ConcreteObserver::SetState()" << endl;
 
-    subject.SetState(++state);
+    subject_.SetState(++state_);
 }
 
 void ConcreteObserver::ShowState() const
 {
     cout << "ConcreteObserver::ShowState()" << endl;
 
-    cout << "state = " << state << endl;
+    cout << "state_ = " << state_ << endl;
 }
 
 } } }

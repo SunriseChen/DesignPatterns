@@ -8,7 +8,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Adapter { namespace Obj
 
 Adapter::Adapter(const Adaptee &adaptee)
     : Target(), 
-    adaptee(adaptee)
+    adaptee_(adaptee)
 {
     cout << "Object::Adapter::Adapter(adaptee = " << &adaptee << ")" << endl;
 }
@@ -17,7 +17,7 @@ void Adapter::Request() const
 {
     cout << "Object::Adapter::Request()" << endl;
 
-    adaptee.SpecificRequest();
+    adaptee_.SpecificRequest();
 }
 
 } } } }

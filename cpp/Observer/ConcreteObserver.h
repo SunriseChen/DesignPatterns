@@ -11,8 +11,8 @@ class ConcreteSubject;
 // 实现 Observer 的更新接口以使自身状态与目标的状态保持一致。
 class ConcreteObserver : public Observer
 {
-    ConcreteSubject &subject;
-    int state;
+    ConcreteSubject &subject_;
+    int state_;
 
 public:
     ConcreteObserver(ConcreteSubject &subject);

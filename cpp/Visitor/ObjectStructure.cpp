@@ -8,7 +8,7 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Visitor {
 
 ObjectStructure::ObjectStructure(Elements &&elements)
-    : elements(elements)
+    : elements_(elements)
 {
     cout << "ObjectStructure::ObjectStructure(elements = " << &elements << ")" << endl;
 }
@@ -17,7 +17,9 @@ void ObjectStructure::Visit(const Visitor &visitor) const
 {
     cout << "ObjectStructure::Visit(visitor = " << &visitor << ")" << endl;
 
-    for_each(elements.begin(), elements.end(), [&](Element *e){ e->Accept(visitor); });
+    for_each(elements_.begin(), elements_.end(), [&](Element *element) {
+        element->Accept(visitor);
+    });
 }
 
 } } }

@@ -8,7 +8,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Flyweight {
 // 它所存储的状态必须是内部的；即，它必须独立于 ConcreteFlyweight 对象的场景。
 class ConcreteFlyweight : public Flyweight
 {
-    int intrinsicState;
+    int intrinsicState_;
 
 public:
     ConcreteFlyweight(int intrinsicState);

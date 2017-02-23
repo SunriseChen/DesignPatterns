@@ -13,7 +13,7 @@ typedef std::list<Element *> Elements;
 // 可以是一个复合（参见 Composite）或是一个集合，如一个列表或一个无序集合。
 class ObjectStructure
 {
-    Elements elements;
+    Elements elements_;
 
 public:
     ObjectStructure(Elements &&elements);

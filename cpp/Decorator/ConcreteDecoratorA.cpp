@@ -7,7 +7,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Decorator {
 
 ConcreteDecoratorA::ConcreteDecoratorA(Component &component)
     : Decorator(component), 
-    addedState(0)
+    addedState_(0)
 {
     cout << "ConcreteDecoratorA::ConcreteDecoratorA(component = " << &component << ")" << endl;
 }
@@ -17,7 +17,7 @@ void ConcreteDecoratorA::Operation()
     cout << "ConcreteDecoratorA::Operation()" << endl;
 
     Decorator::Operation();
-    cout << "addedState = " << ++addedState << endl;
+    cout << "addedState_ = " << ++addedState_ << endl;
 }
 
 } } }

@@ -10,8 +10,8 @@ namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 template<typename TItem>
 class ConcreteIterator : public Iterator<TItem>
 {
-    ConcreteAggregate<TItem> &aggregate;
-    long currentIndex;
+    ConcreteAggregate<TItem> &aggregate_;
+    long currentIndex_;
 
 public:
     ConcreteIterator(ConcreteAggregate<TItem> &aggregate);

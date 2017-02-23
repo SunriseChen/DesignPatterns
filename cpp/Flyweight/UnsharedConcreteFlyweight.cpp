@@ -7,7 +7,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Flyweight {
 
 UnsharedConcreteFlyweight::UnsharedConcreteFlyweight(int allState)
     : Flyweight(), 
-    allState(allState)
+    allState_(allState)
 {
     cout << "UnsharedConcreteFlyweight::UnsharedConcreteFlyweight(allState = " << allState << ")" << endl;
 }
@@ -16,7 +16,7 @@ void UnsharedConcreteFlyweight::Operation(int extrinsicState) const
 {
     cout << "UnsharedConcreteFlyweight::Operation(extrinsicState = " << extrinsicState << ")" << endl;
 
-    cout << allState << " + " << extrinsicState << " = " << allState + extrinsicState << endl;
+    cout << allState_ << " + " << extrinsicState << " = " << allState_ + extrinsicState << endl;
 }
 
 } } }

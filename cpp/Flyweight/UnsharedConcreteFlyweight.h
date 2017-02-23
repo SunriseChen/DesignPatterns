@@ -9,7 +9,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Flyweight {
 // 对象作为子节点（Row 和 Column 就是这样）。
 class UnsharedConcreteFlyweight : public Flyweight
 {
-    int allState;
+    int allState_;
 
 public:
     UnsharedConcreteFlyweight(int allState);

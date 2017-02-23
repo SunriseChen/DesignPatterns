@@ -9,7 +9,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Singleton {
 // 可能负责创建它自己的唯一实例。
 class Singleton
 {
-    static std::unique_ptr<Singleton> instance;
+    static std::unique_ptr<Singleton> instance_;
 
 protected:
     Singleton();

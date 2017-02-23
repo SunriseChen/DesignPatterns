@@ -5,6 +5,7 @@
 namespace Sunrise { namespace DesignPatterns { namespace Memento {
 
 class State;
+typedef std::shared_ptr<State> StatePtr;
 
 // 备忘录存储原发器对象的内部状态。原发器根据需要决定备忘录存储原发器的哪些内部状态。
 // 防止原发器以外的其他对象访问备忘录。备忘录实际上有两个接口，管理者(caretaker)
@@ -13,15 +14,15 @@ class State;
 // 理想的情况是只允许生成本备忘录的那个原发器访问本备忘录的内部状态。
 class Memento
 {
-    std::shared_ptr<State> state;
+    StatePtr state_;
 
     // 宽接口
     friend class Originator;
 
-    Memento(const std::shared_ptr<State> &state);
+    Memento(const StatePtr &state);
 
-    std::shared_ptr<State> GetState() const;
-    void SetState(const std::shared_ptr<State> &state);
+    StatePtr GetState() const;
+    void SetState(const StatePtr &state);
 
 public:
     // 窄接口

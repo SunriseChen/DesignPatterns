@@ -7,7 +7,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Interpreter {
 // 包含解释器之外的一些全局信息。
 class Context
 {
-    std::string result;
+    std::string result_;
 
 public:
     Context();

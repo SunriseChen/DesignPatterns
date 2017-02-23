@@ -14,7 +14,7 @@ StandardCreator<TProduct>::StandardCreator()
 }
 
 template<typename TProduct>
-std::shared_ptr<Product> StandardCreator<TProduct>::FactoryMethod() const
+ProductPtr StandardCreator<TProduct>::FactoryMethod() const
 {
     using namespace std;
 

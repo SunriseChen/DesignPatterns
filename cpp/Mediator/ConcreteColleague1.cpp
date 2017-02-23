@@ -16,14 +16,14 @@ void ConcreteColleague1::OperationD() const
 {
     cout << "ConcreteColleague1::OperationD()" << endl;
 
-    mediator.OperationB();
+    mediator_.OperationB();
 }
 
 void ConcreteColleague1::OperationF() const
 {
     cout << "ConcreteColleague1::OperationF()" << endl;
 
-    mediator.OperationC();
+    mediator_.OperationC();
 }
 
 } } }

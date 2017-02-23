@@ -9,7 +9,7 @@ class Mediator;
 class Colleague
 {
 protected:
-    const Mediator &mediator;
+    const Mediator &mediator_;
 
     Colleague(const Mediator &mediator);
 

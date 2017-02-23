@@ -19,7 +19,7 @@ void ContextT<TStrategy>::ContextInterface() const
 
     cout << "ContextT<TStrategy>::ContextInterface()" << endl;
 
-    strategy.AlgorithmInterface();
+    strategy_.AlgorithmInterface();
 }
 
 } } }

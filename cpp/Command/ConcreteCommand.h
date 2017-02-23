@@ -10,8 +10,8 @@ class Receiver;
 // 调用接收者相应的操作，以实现 Execute。
 class ConcreteCommand : public Command
 {
-    const Receiver &receiver;
-    int state;
+    const Receiver &receiver_;
+    int state_;
 
 public:
     ConcreteCommand(const Receiver &receiver);

@@ -7,7 +7,7 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Memento {
 
 Caretaker::Caretaker()
-    : memento(nullptr)
+    : memento_(nullptr)
 {
     cout << "Caretaker::Caretaker()" << endl;
 }
@@ -18,18 +18,18 @@ void Caretaker::Execute()
 
     Originator originator;
     originator.ShowState();
-    memento = unique_ptr<Memento>(originator.CreateMemento());
+    memento_ = unique_ptr<Memento>(originator.CreateMemento());
 }
 
 void Caretaker::Unexecute()
 {
     cout << "Caretaker::Unexecute()" << endl;
 
-    if (memento)
+    if (memento_)
     {
         Originator originator;
         originator.ShowState();
-        originator.SetMemento(memento.get());
+        originator.SetMemento(memento_.get());
         originator.ShowState();
     }
 }

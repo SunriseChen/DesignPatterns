@@ -8,7 +8,7 @@ class State;
 // 维护一个 ConcreteState 子类的实例，这个实例定义当前状态。
 class Context
 {
-    State *state;
+    State *state_;
 
 public:
     Context();

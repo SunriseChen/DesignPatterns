@@ -9,7 +9,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Memento {
 // 不能对备忘录的内容进行操作或检查。
 class Caretaker
 {
-    std::unique_ptr<Memento> memento;
+    std::unique_ptr<Memento> memento_;
 
 public:
     Caretaker();

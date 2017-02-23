@@ -9,7 +9,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Builder {
 // 提供一个检索产品的接口。
 class ConcreteBuilder : public Builder
 {
-    std::string result;
+    std::string result_;
 
 public:
     ConcreteBuilder();

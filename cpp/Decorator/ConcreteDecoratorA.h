@@ -7,7 +7,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Decorator {
 // 向组件添加职责。
 class ConcreteDecoratorA : public Decorator
 {
-    int addedState;
+    int addedState_;
 
 public:
     ConcreteDecoratorA(Component &component);

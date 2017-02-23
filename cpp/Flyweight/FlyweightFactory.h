@@ -8,7 +8,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Flyweight {
 class ConcreteFlyweight;
 class UnsharedConcreteFlyweight;
 typedef std::shared_ptr<ConcreteFlyweight> FlyweightPtr;
-typedef std::unordered_map<int, std::shared_ptr<ConcreteFlyweight>> FlyweightMap;
+typedef std::unordered_map<int, FlyweightPtr> FlyweightMap;
 typedef std::shared_ptr<UnsharedConcreteFlyweight> UnsharedFlyweightPtr;
 
 // 创建并管理 flyweight 对象。
@@ -16,7 +16,7 @@ typedef std::shared_ptr<UnsharedConcreteFlyweight> UnsharedFlyweightPtr;
 // 对象提供一个已创建的实例或者创建一个（如果不存在的话）。
 class FlyweightFactory
 {
-    FlyweightMap flyweights;
+    FlyweightMap flyweights_;
 
 public:
     FlyweightFactory();

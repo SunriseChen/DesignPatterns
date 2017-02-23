@@ -12,7 +12,7 @@ ConcreteCreator::ConcreteCreator()
     cout << "ConcreteCreator::ConcreteCreator()" << endl;
 }
 
-shared_ptr<Product> ConcreteCreator::FactoryMethod() const
+ProductPtr ConcreteCreator::FactoryMethod() const
 {
     cout << "ConcreteCreator::FactoryMethod()" << endl;
 

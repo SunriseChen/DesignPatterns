@@ -5,7 +5,7 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Singleton {
 
-unique_ptr<Singleton> Singleton::instance;
+unique_ptr<Singleton> Singleton::instance_;
 
 Singleton::Singleton()
 {
@@ -16,12 +16,12 @@ Singleton & Singleton::Instance()
 {
     cout << "Singleton::Instance()" << endl;
 
-    if (!instance)
+    if (!instance_)
     {
-        instance = unique_ptr<Singleton>(new Singleton);
+        instance_ = unique_ptr<Singleton>(new Singleton);
     }
 
-    return *instance;
+    return *instance_;
 }
 
 void Singleton::SingletonOperation() const

@@ -6,6 +6,7 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace FactoryMethod {
 
 Creator::Creator()
+    : product_(nullptr)
 {
     cout << "Creator::Creator()" << endl;
 }
@@ -17,16 +18,16 @@ void Creator::AnOperation() const
     auto product = FactoryMethod();
 }
 
-const shared_ptr<Product> & Creator::GetProduct()
+const ProductPtr & Creator::GetProduct()
 {
     cout << "Creator::GetProduct()" << endl;
 
-    if (!product)
+    if (!product_)
     {
-        product = FactoryMethod();
+        product_ = FactoryMethod();
     }
 
-    return product;
+    return product_;
 }
 
 } } }

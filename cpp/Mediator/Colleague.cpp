@@ -6,7 +6,7 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Mediator {
 
 Colleague::Colleague(const Mediator &mediator)
-    : mediator(mediator)
+    : mediator_(mediator)
 {
     cout << "Colleague::Colleague(mediator = " << &mediator << ")" << endl;
 }

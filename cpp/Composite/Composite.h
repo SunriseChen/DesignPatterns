@@ -9,7 +9,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Composite {
 // 在 Component 接口中实现与子部件有关的操作。
 class Composite : public Component
 {
-    ComponentList children;
+    ComponentList children_;
 
 public:
     Composite();

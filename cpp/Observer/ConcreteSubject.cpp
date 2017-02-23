@@ -7,7 +7,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Observer {
 
 ConcreteSubject::ConcreteSubject()
     : Subject(), 
-    state(0)
+    state_(0)
 {
     cout << "ConcreteSubject::ConcreteSubject()" << endl;
 }
@@ -16,14 +16,14 @@ int ConcreteSubject::GetState() const
 {
     cout << "ConcreteSubject::GetState()" << endl;
 
-    return state;
+    return state_;
 }
 
 void ConcreteSubject::SetState(int state)
 {
     cout << "ConcreteSubject::SetState(state = " << state << ")" << endl;
 
-    this->state = state;
+    state_ = state;
     Notify();
 }
 

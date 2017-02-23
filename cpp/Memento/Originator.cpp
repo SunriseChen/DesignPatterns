@@ -8,7 +8,7 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace Memento {
 
 Originator::Originator()
-    : state(make_shared<State>())
+    : state_(make_shared<State>())
 {
     cout << "Originator::Originator()" << endl;
 }
@@ -17,7 +17,7 @@ Memento * Originator::CreateMemento() const
 {
     cout << "Originator::CreateMemento()" << endl;
 
-    return new Memento(state);
+    return new Memento(state_);
 }
 
 void Originator::SetMemento(const Memento *memento)
@@ -26,13 +26,13 @@ void Originator::SetMemento(const Memento *memento)
 
     if (memento)
     {
-        state = memento->GetState();
+        state_ = memento->GetState();
     }
 }
 
 void Originator::ShowState() const
 {
-    cout << "state = " << state << endl;
+    cout << "state_ = " << state_ << endl;
 }
 
 } } }

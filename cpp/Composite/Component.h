@@ -1,13 +1,13 @@
 #pragma once
 
-#include <list>
 #include <memory>
+#include <list>
 
 namespace Sunrise { namespace DesignPatterns { namespace Composite {
 
 class Component;
 typedef std::shared_ptr<Component> ComponentPtr;
-typedef std::list<std::shared_ptr<Component>> ComponentList;
+typedef std::list<ComponentPtr> ComponentList;
 
 // 为组合中的对象声明接口。
 // 在适当的情况下，实现所有类共有接口的缺省行为。

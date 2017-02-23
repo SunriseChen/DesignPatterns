@@ -6,7 +6,7 @@ using namespace std;
 namespace Sunrise { namespace DesignPatterns { namespace ChainOfResponsibility {
 
 Handler::Handler(const Handler *successor)
-    : successor(successor)
+    : successor_(successor)
 {
     cout << "Handler::Handler(successor = " << successor << ")" << endl;
 }
@@ -15,9 +15,9 @@ void Handler::HandleRequest() const
 {
     cout << "Handler::HandleRequest()" << endl;
 
-    if (successor)
+    if (successor_)
     {
-        successor->HandleRequest();
+        successor_->HandleRequest();
     }
 }
 

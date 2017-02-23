@@ -8,7 +8,7 @@ namespace Sunrise { namespace DesignPatterns { namespace Observer {
 // 当它的状态发生改变时，向它的各个观察者发出通知。
 class ConcreteSubject : public Subject
 {
-    int state;
+    int state_;
 
 public:
     ConcreteSubject();
