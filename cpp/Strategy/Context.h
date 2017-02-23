@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Strategy.h"
-
 namespace Sunrise { namespace DesignPatterns { namespace Strategy {
+
+class Strategy;
 
 // 用一个 ConcreteStrategy 对象来配置。
 // 维护一个对 Strategy 对象的引用。

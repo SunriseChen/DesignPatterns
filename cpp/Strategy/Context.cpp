@@ -1,5 +1,6 @@
 #include "Context.h"
 #include <iostream>
+#include "Strategy.h"
 
 using namespace std;
 
