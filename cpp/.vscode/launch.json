@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/bin/debug/DesignPatterns.exe",
-            "args": [ "TemplateMethod" ],
+            "args": [ "Visitor" ],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
             "environment": [],

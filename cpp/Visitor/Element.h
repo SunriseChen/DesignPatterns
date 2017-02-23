@@ -7,11 +7,11 @@ class Visitor;
 // 定义一个 Accept 操作，它以一个访问者为参数。
 class Element
 {
-public:
-    virtual void Accept(const Visitor &visitor) = 0;
-
 protected:
     Element();
+
+public:
+    virtual void Accept(const Visitor &visitor) = 0;
 };
 
 } } }

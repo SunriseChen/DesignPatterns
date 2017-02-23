@@ -10,12 +10,12 @@ class ConcreteElementB;
 // 这使得访问者可以确定正被访问元素的具体的类。这样访问者就可以通过该元素的特定接口直接访问它。
 class Visitor
 {
+protected:
+    Visitor();
+
 public:
     virtual void VisitConcreteElementA(ConcreteElementA &element) const = 0;
     virtual void VisitConcreteElementB(ConcreteElementB &element) const = 0;
-
-protected:
-    Visitor();
 };
 
 } } }

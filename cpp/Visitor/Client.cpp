@@ -17,6 +17,7 @@ void Client::Run(const Visitor &visitor) const
     cout << "Client::Run(visitor = " << &visitor << ")" << endl;
 
     objectStructure.Visit(visitor);
+    cout << endl;
 }
 
 } } }

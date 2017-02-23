@@ -20,8 +20,9 @@ void Show::DoRun() const
 {
     ConcreteElementA elementA;
     ConcreteElementB elementB;
-    ObjectStructure objectStructure(list<Element *> { &elementA, &elementB });
+    ObjectStructure objectStructure(Elements { &elementA, &elementB });
     Client client(objectStructure);
+    cout << endl;
 
     ConcreteVisitor1 visitor1;
     client.Run(visitor1);

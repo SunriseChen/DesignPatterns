@@ -7,7 +7,7 @@ using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Visitor {
 
-ObjectStructure::ObjectStructure(list<Element *> &&elements)
+ObjectStructure::ObjectStructure(Elements &&elements)
     : elements(elements)
 {
     cout << "ObjectStructure::ObjectStructure(elements = " << &elements << ")" << endl;
