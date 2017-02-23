@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Subject.h"
-#include <memory>
 
 namespace Sunrise { namespace DesignPatterns { namespace Proxy {
 
@@ -14,10 +13,10 @@ namespace Sunrise { namespace DesignPatterns { namespace Proxy {
 // • Protection Proxy 检查调用者是否具有实现一个请求所必需的访问权限。
 class Proxy : public Subject
 {
-    std::shared_ptr<Subject> realSubject;
+    const Subject &realSubject;
 
 public:
-    Proxy(const std::shared_ptr<Subject> &realSubject);
+    Proxy(const Subject &realSubject);
 
     virtual void Request() const;
 };

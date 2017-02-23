@@ -10,9 +10,4 @@ Subject::Subject()
     cout << "Subject::Subject()" << endl;
 }
 
-void Subject::Request() const
-{
-    cout << "Subject::Request()" << endl;
-}
-
 } } }

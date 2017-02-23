@@ -1,18 +1,15 @@
 #pragma once
 
-#include "Subject.h"
-#include <memory>
-
 namespace Sunrise { namespace DesignPatterns { namespace Proxy {
+
+class Subject;
 
 class Client
 {
-    std::shared_ptr<Subject> subject;
-
 public:
-    Client(const std::shared_ptr<Subject> &subject);
+    Client();
 
-    void Run() const;
+    void Run(const Subject &subject) const;
 };
 
 } } }

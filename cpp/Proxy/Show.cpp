@@ -1,5 +1,4 @@
 #include "Show.h"
-#include <memory>
 #include <iostream>
 #include "Client.h"
 #include "RealSubject.h"
@@ -16,10 +15,10 @@ Show::Show()
 
 void Show::DoRun() const
 {
-    auto realSubject = make_shared<RealSubject>();
-    auto proxy = make_shared<Proxy>(realSubject);
-    Client client(proxy);
-    client.Run();
+    Client client;
+    RealSubject realSubject;
+    Proxy proxy(realSubject);
+    client.Run(proxy);
 }
 
 } } }

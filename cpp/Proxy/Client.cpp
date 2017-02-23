@@ -1,21 +1,22 @@
 #include "Client.h"
 #include <iostream>
+#include "Subject.h"
 
 using namespace std;
 
 namespace Sunrise { namespace DesignPatterns { namespace Proxy {
 
-Client::Client(const shared_ptr<Subject> &subject)
-    : subject(subject)
+Client::Client()
 {
-    cout << "Client::Client(" << subject << ")" << endl;
+    cout << "Client::Client()" << endl;
 }
 
-void Client::Run() const
+void Client::Run(const Subject &subject) const
 {
-    cout << "Client::Run()" << endl;
+    cout << "Client::Run(subject = " << &subject << ")" << endl;
 
-    subject->Request();
+    subject.Request();
+    cout << endl;
 }
 
 } } }
