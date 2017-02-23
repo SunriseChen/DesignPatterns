@@ -7,6 +7,11 @@ namespace Sunrise { namespace DesignPatterns { namespace Singleton {
 
 unique_ptr<Singleton> Singleton::instance;
 
+Singleton::Singleton()
+{
+    cout << "Singleton::Singleton()" << endl;
+}
+
 Singleton & Singleton::Instance()
 {
     cout << "Singleton::Instance()" << endl;
@@ -30,11 +35,6 @@ const string & Singleton::GetSingletonData() const
 
     static string result = "Singleton Data";
     return result;
-}
-
-Singleton::Singleton()
-{
-    cout << "Singleton::Singleton()" << endl;
 }
 
 } } }

@@ -1,5 +1,4 @@
 #include "Client.h"
-#include <memory>
 #include <iostream>
 #include "Singleton.h"
 
@@ -17,10 +16,10 @@ void Client::Run() const
     cout << "Client::Run()" << endl;
 
     auto singleton = Singleton::Instance();
-    cout << &singleton << endl;
+    cout << "singleton = " << &singleton << endl;
     singleton.SingletonOperation();
     auto data = singleton.GetSingletonData();
-    cout << data << endl;
+    cout << "data = \"" << data << "\"" << endl << endl;
 }
 
 } } }

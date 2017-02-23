@@ -1,6 +1,4 @@
 #include "Show.h"
-#include <memory>
-#include <iostream>
 #include "Client.h"
 
 using namespace std;
@@ -14,13 +12,14 @@ Show::Show()
 
 void Show::DoRun() const
 {
-    auto client = make_shared<Client>();
-    client->Run();
-    cout << endl;
-
-    client = make_shared<Client>();
-    client->Run();
-    cout << endl;
+    {
+        Client client;
+        client.Run();
+    }
+    {
+        Client client;
+        client.Run();
+    }
 }
 
 } } }

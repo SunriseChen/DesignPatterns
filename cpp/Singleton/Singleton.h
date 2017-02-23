@@ -11,13 +11,13 @@ class Singleton
 {
     static std::unique_ptr<Singleton> instance;
 
+protected:
+    Singleton();
+
 public:
     static Singleton & Instance();
     virtual void SingletonOperation() const;
     virtual const std::string & GetSingletonData() const;
-
-protected:
-    Singleton();
 };
 
 } } }
