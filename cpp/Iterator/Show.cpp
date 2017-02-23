@@ -1,5 +1,4 @@
 #include "Show.h"
-#include <iostream>
 #include <vector>
 #include "Client.h"
 #include "ConcreteAggregate.h"

@@ -39,7 +39,7 @@ void ShowHelp(const string &program)
 
 typedef unordered_set<string> ShowName;
 
-template<class TShow>
+template<typename TShow>
 void Run(const ShowName &names)
 {
     TShow show;

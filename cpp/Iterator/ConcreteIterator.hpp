@@ -4,7 +4,7 @@
 
 namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 
-template<class TItem>
+template<typename TItem>
 ConcreteIterator<TItem>::ConcreteIterator(ConcreteAggregate<TItem> &aggregate)
     : Iterator<TItem>(), 
     aggregate(aggregate), 
@@ -15,7 +15,7 @@ ConcreteIterator<TItem>::ConcreteIterator(ConcreteAggregate<TItem> &aggregate)
     cout << "ConcreteIterator<TItem>::ConcreteIterator(aggregate = " << &aggregate << ")" << endl;
 }
 
-template<class TItem>
+template<typename TItem>
 void ConcreteIterator<TItem>::First()
 {
     using namespace std;
@@ -25,7 +25,7 @@ void ConcreteIterator<TItem>::First()
     currentIndex = aggregate.Count() - 1;
 }
 
-template<class TItem>
+template<typename TItem>
 void ConcreteIterator<TItem>::Next()
 {
     using namespace std;
@@ -35,7 +35,7 @@ void ConcreteIterator<TItem>::Next()
     --currentIndex;
 }
 
-template<class TItem>
+template<typename TItem>
 bool ConcreteIterator<TItem>::IsDone() const
 {
     using namespace std;
@@ -45,7 +45,7 @@ bool ConcreteIterator<TItem>::IsDone() const
     return currentIndex < 0;
 }
 
-template<class TItem>
+template<typename TItem>
 TItem & ConcreteIterator<TItem>::CurrentItem()
 {
     using namespace std;

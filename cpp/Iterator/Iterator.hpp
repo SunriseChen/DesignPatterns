@@ -4,7 +4,7 @@
 
 namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 
-template<class TItem>
+template<typename TItem>
 Iterator<TItem>::Iterator()
 {
     using namespace std;

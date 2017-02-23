@@ -4,7 +4,7 @@
 
 namespace Sunrise { namespace DesignPatterns { namespace Strategy {
 
-template<class TStrategy>
+template<typename TStrategy>
 ContextT<TStrategy>::ContextT()
 {
     using namespace std;
@@ -12,7 +12,7 @@ ContextT<TStrategy>::ContextT()
     cout << "ContextT<TStrategy>::ContextT()" << endl;
 }
 
-template<class TStrategy>
+template<typename TStrategy>
 void ContextT<TStrategy>::ContextInterface() const
 {
     using namespace std;

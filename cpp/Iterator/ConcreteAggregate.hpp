@@ -5,7 +5,7 @@
 
 namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 
-template<class TItem>
+template<typename TItem>
 ConcreteAggregate<TItem>::ConcreteAggregate(DataType &&data)
     : Aggregate<TItem>(), 
     data(data)
@@ -15,7 +15,7 @@ ConcreteAggregate<TItem>::ConcreteAggregate(DataType &&data)
     cout << "ConcreteAggregate<TItem>::ConcreteAggregate(data = " << &data << ")" << endl;
 }
 
-template<class TItem>
+template<typename TItem>
 typename Aggregate<TItem>::IteratorPtr ConcreteAggregate<TItem>::CreateIterator()
 {
     using namespace std;
@@ -25,7 +25,7 @@ typename Aggregate<TItem>::IteratorPtr ConcreteAggregate<TItem>::CreateIterator(
     return typename Aggregate<TItem>::IteratorPtr(new ConcreteIterator<TItem>(*this));
 }
 
-template<class TItem>
+template<typename TItem>
 long ConcreteAggregate<TItem>::Count() const
 {
     using namespace std;
@@ -35,7 +35,7 @@ long ConcreteAggregate<TItem>::Count() const
     return data.size();
 }
 
-template<class TItem>
+template<typename TItem>
 TItem & ConcreteAggregate<TItem>::Get(long index)
 {
     using namespace std;

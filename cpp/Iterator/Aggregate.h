@@ -6,7 +6,7 @@
 namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 
 // 聚合定义创建相应迭代器对象的接口。
-template<class TItem>
+template<typename TItem>
 class Aggregate
 {
 public:

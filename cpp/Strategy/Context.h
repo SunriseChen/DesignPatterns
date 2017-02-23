@@ -19,7 +19,7 @@ public:
 };
 
 // 将 Strategy 作为模板参数的实现方式。
-template<class TStrategy>
+template<typename TStrategy>
 class ContextT
 {
     TStrategy strategy;

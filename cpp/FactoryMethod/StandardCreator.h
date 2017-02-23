@@ -4,7 +4,7 @@
 
 namespace Sunrise { namespace DesignPatterns { namespace FactoryMethod {
 
-template<class TProduct>
+template<typename TProduct>
 class StandardCreator : public Creator
 {
 public:

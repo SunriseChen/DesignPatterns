@@ -3,7 +3,7 @@
 namespace Sunrise { namespace DesignPatterns { namespace Iterator {
 
 // 迭代器定义访问和遍历元素的接口。
-template<class TItem>
+template<typename TItem>
 class Iterator
 {
 public:

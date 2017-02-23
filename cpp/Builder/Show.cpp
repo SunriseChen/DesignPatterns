@@ -1,5 +1,4 @@
 #include "Show.h"
-#include <iostream>
 #include "Client.h"
 
 using namespace std;

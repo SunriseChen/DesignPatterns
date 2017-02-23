@@ -4,7 +4,7 @@
 
 namespace Sunrise { namespace DesignPatterns { namespace FactoryMethod {
 
-template<class TProduct>
+template<typename TProduct>
 StandardCreator<TProduct>::StandardCreator()
     : Creator()
 {
@@ -13,7 +13,7 @@ StandardCreator<TProduct>::StandardCreator()
     cout << "StandardCreator<TProduct>::StandardCreator()" << endl;
 }
 
-template<class TProduct>
+template<typename TProduct>
 std::shared_ptr<Product> StandardCreator<TProduct>::FactoryMethod() const
 {
     using namespace std;
